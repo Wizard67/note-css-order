@@ -33,21 +33,21 @@ css 属性书写顺序推荐
 　　　　　　| 字体属性  ：font  
 　　　　　　　　| ...  
 　　　　　　| 文本颜色  ：color  
-　　　　　　| 字体样式集：font-feature-setting  　
-　　　　　　| 文本控制  　
-　　　　　　　　| 空白符处理  ：white-space  　
-　　　　　　　　| 文本溢出处理：text-overflow  　
-　　　　　　　　| 字间距      ：letter-spacing  　
-　　　　　　　　| 西文处理  　
-　　　　　　　　　　| ...  　
-　　　　　　　　| 文本对齐    ：text-align...  　
-　　　　　　| 文本装饰  　
-　　　　　　　　| 引用符号  ：qutoes  　
-　　　　　　　　| 制表符宽度：tab-size  　
-　　　　　　　　| 首行缩进  ：text-indent  　
-　　　　　　　　| 重点标记  ：text-emphasis...  　
-　　　　　　　　| 横线装饰  ：text-decoration...  　
-　　　　　　　　| 文本阴影  ：text-shadow  　
+　　　　　　| 字体样式集：font-feature-setting  
+　　　　　　| 文本控制  
+　　　　　　　　| 空白符处理  ：white-space  
+　　　　　　　　| 文本溢出处理：text-overflow  
+　　　　　　　　| 字间距      ：letter-spacing  
+　　　　　　　　| 西文处理  
+　　　　　　　　　　| ...  
+　　　　　　　　| 文本对齐    ：text-align...  
+　　　　　　| 文本装饰  
+　　　　　　　　| 引用符号  ：qutoes  
+　　　　　　　　| 制表符宽度：tab-size  
+　　　　　　　　| 首行缩进  ：text-indent  
+　　　　　　　　| 重点标记  ：text-emphasis...  
+　　　　　　　　| 横线装饰  ：text-decoration...  
+　　　　　　　　| 文本阴影  ：text-shadow  
 　　　　| 图片元素  
 　　　　　　| 缩放算法：image-rendering  
 　　　　　　| 预设方向：image-orentation  
