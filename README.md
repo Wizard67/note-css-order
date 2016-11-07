@@ -1,7 +1,7 @@
 # CSS-order
 css 属性书写顺序推荐
 
-根据 MDN 中[CSS参考](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)归纳整理。
+根据 MDN 中 [CSS参考](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) 归纳整理。
 
 ##summary
 | 布局定位  
@@ -71,3 +71,5 @@ css 属性书写顺序推荐
 | 动态效果  
 　　| 过渡效果：transition...  
 　　| 动画属性：animation...  
+
+更加详细的属性和参数请见 order.css
