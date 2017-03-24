@@ -358,9 +358,9 @@ div {
   /*让元素事件不被鼠标捕获*/
   pointer-events: auto | none;
   /*重设除了 unicode-bidi 和 direction 之外的所有属性*/
-  all: initial | inherit | unset;
-
-
+  all: initial | inherit | unset;  
+  /*设置元素表现样式*/
+  -appearance：auto | none;
   /*指定子元素空间状态（2d/3d）*/
   -transform-style: flat | preserve-3d;
 
