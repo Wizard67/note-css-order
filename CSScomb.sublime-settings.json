@@ -26,7 +26,7 @@
         "eof-newline": true,
 
         // Add/remove leading zero in dimensions.
-        "leading-zero": true,
+        "leading-zero": false,
 
         // Unify quotes style.
         "quotes": "double",
