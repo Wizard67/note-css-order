@@ -64,7 +64,7 @@ css 属性书写顺序推荐
 　　　　　　| 文本容器：counter  
 　　　　　　| 优化准备：will  
 　　　　　　| 事件穿透：pointer-events  
-           | 渲染样式：appearance  
+　　　　　　| 渲染样式：appearance  
 　　　　　　| 属性重置：all  
     | 盒子变形  
 　　　　| 空间状态：transform-style  
