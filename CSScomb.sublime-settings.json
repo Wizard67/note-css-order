@@ -1,0 +1,378 @@
+{
+    // If plugin has trouble finding Node.js, replace this string with path
+    // to your `node` bin
+    "node-path" : ":/usr/local/bin",
+
+    // Full list of supported options and acceptable values can be found here:
+    // https://github.com/csscomb/csscomb.js/blob/master/doc/options.md
+    "config": {
+
+        // Whether to add a semicolon after the last value/mixin.
+        "always-semicolon": true,
+
+        // Set indent for code inside blocks, including media queries and nested rules.
+        "block-indent": "  ",
+
+        // Unify case of hexadecimal colors.
+        "color-case": "lower",
+
+        // Whether to expand hexadecimal colors or use shorthands.
+        "color-shorthand": false,
+
+        // Unify case of element selectors.
+        "element-case": "lower",
+
+        // Add/remove line break at EOF.
+        "eof-newline": true,
+
+        // Add/remove leading zero in dimensions.
+        "leading-zero": true,
+
+        // Unify quotes style.
+        "quotes": "double",
+
+        // Remove all rulesets that contain nothing but spaces.
+        "remove-empty-rulesets": true,
+
+        // Set space after `:` in declarations.
+        "space-after-colon": " ",
+
+        // Set space after combinator (for example, in selectors like `p > a`).
+        "space-after-combinator": " ",
+
+        // Set space after `{`.
+        "space-after-opening-brace": "\n",
+
+        // Set space after selector delimiter.
+        "space-after-selector-delimiter": "\n",
+
+        // Set space before `}`.
+        "space-before-closing-brace": "\n",
+
+        // Set space before `:` in declarations.
+        "space-before-colon": "",
+
+        // Set space before combinator (for example, in selectors like `p > a`).
+        "space-before-combinator": " ",
+
+        // Set space before `{`.
+        "space-before-opening-brace": " ",
+
+        // Set space before selector delimiter.
+        "space-before-selector-delimiter": "",
+
+        // Set space between declarations (i.e. `color: tomato`).
+        "space-between-declarations": "\n",
+
+        // Whether to trim trailing spaces.
+        "strip-spaces": true,
+
+        // Whether to remove units in zero-valued dimensions.
+        "unitless-zero": true,
+
+        // Whether to align prefixes in properties and values.
+        "vendor-prefix-align": true,
+
+        // Sort properties in particular order.
+        "sort-order": [
+          [
+            "$variable"
+          ],
+          [
+            "$include"
+          ],
+          [
+            "position",
+            "top",
+            "right",
+            "bottom",
+            "left",
+            "float",
+            "clear"
+          ],
+          [
+            "display",
+            "-webkit-box-flex",
+            "-ms-flex",
+            "flex",
+            "-ms-flex-positive",
+            "flex-grow",
+            "-ms-flex-negative",
+            "flex-shrink",
+            "-ms-flex-preferred-size",
+            "flex-basis",
+            "-webkit-box-ordinal-group",
+            "-ms-flex-order",
+            "order",
+            "-webkit-box-orient",
+            "-webkit-box-direction",
+            "-ms-flex-direction",
+            "flex-direction",
+            "-ms-flex-flow",
+            "flex-flow",
+            "-webkit-box-pack",
+            "-ms-flex-pack",
+            "justify-content",
+            "-ms-flex-line-pack",
+            "align-content",
+            "-webkit-box-align",
+            "-ms-flex-align",
+            "align-items",
+            "-ms-flex-item-align",
+            "-ms-grid-row-align",
+            "align-self",
+            "table-layout",
+            "empty-cells",
+            "caption-side",
+            "border-collapse",
+            "border-spacing",
+            "list-style",
+            "list-style-type",
+            "list-style-position",
+            "list-style-image"
+          ],
+          [
+            "box-sizing",
+            "width",
+            "min-width",
+            "max-width",
+            "height",
+            "min-height",
+            "max-height",
+            "padding",
+            "padding-top",
+            "padding-right",
+            "padding-bottom",
+            "padding-left",
+            "border",
+            "border-width",
+            "border-top-width",
+            "border-right-width",
+            "border-bottom-width",
+            "border-left-width",
+            "border-style",
+            "border-top-style",
+            "border-right-style",
+            "border-bottom-style",
+            "border-left-style",
+            "border-color",
+            "border-top-color",
+            "border-right-color",
+            "border-bottom-color",
+            "border-left-color",
+            "border-image",
+            "border-image-source",
+            "border-image-slice",
+            "border-image-width",
+            "border-image-outset",
+            "border-image-repeat",
+            "border-top",
+            "border-top-width",
+            "border-top-style",
+            "border-top-color",
+            "border-right",
+            "border-right-width",
+            "border-right-style",
+            "border-right-color",
+            "border-bottom",
+            "border-bottom-width",
+            "border-bottom-style",
+            "border-bottom-color",
+            "border-left",
+            "border-left-width",
+            "border-left-style",
+            "border-left-color",
+            "border-radius",
+            "border-top-right-radius",
+            "border-bottom-right-radius",
+            "border-bottom-left-radius",
+            "border-top-left-radius",
+            "outline",
+            "outline-width",
+            "outline-color",
+            "outline-style",
+            "outline-offset",
+            "margin",
+            "margin-top",
+            "margin-right",
+            "margin-bottom",
+            "margin-left",
+            "background",
+            "background-image",
+            "background-position",
+            "background-size",
+            "background-repeat",
+            "background-origin",
+            "background-clip",
+            "background-attachment",
+            "background-color",
+            "background-blend-mode",
+            "box-shadow",
+            "opacity",
+            "-webkit-filter",
+            "filter"
+          ],
+          [
+            "-webkit-columns",
+            "-moz-columns",
+            "columns",
+            "-webkit-column-width",
+            "-moz-column-width",
+            "column-width",
+            "-webkit-column-count",
+            "-moz-column-count",
+            "column-count",
+            "-webkit-column-gap",
+            "-moz-column-gap",
+            "column-gap",
+            "-webkit-column-rule",
+            "-moz-column-rule",
+            "column-rule",
+            "-webkit-column-rule-width",
+            "-moz-column-rule-width",
+            "column-rule-width",
+            "-webkit-column-rule-style",
+            "-moz-column-rule-style",
+            "column-rule-style",
+            "-webkit-column-rule-color",
+            "-moz-column-rule-color",
+            "column-rule-color",
+            "-webkit-column-span",
+            "-moz-column-span",
+            "column-span",
+            "orphans",
+            "overflow",
+            "overflow-x",
+            "overflow-y",
+            "vertical-align",
+            "text-rendering",
+            "-webkit-writing-mode",
+            "-ms-writing-mode",
+            "writing-mode",
+            "text-combine-upright",
+            "text-orientation",
+            "direction",
+            "unicode-bidi",
+            "font",
+            "font-style",
+            "font-variant",
+            "font-weight",
+            "font-stretch",
+            "font-size",
+            "font-family",
+            "line-height",
+            "color",
+            "-webkit-font-feature-settings",
+            "font-feature-settings",
+            "white-space",
+            "text-overflow",
+            "letter-spacing",
+            "-webkit-font-kerning",
+            "font-kerning",
+            "word-spacing",
+            "text-transform",
+            "overflow-wrap",
+            "word-wrap",
+            "word-break",
+            "-webkit-hyphens",
+            "-ms-hyphens",
+            "hyphens",
+            "text-align",
+            "-moz-text-align-last",
+            "text-align-last",
+            "quotes",
+            "-moz-tab-size",
+            "tab-size",
+            "text-indent",
+            "-webkit-text-emphasis",
+            "text-emphasis",
+            "-webkit-text-emphasis-color",
+            "text-emphasis-color",
+            "-webkit-text-emphasis-position",
+            "text-emphasis-position",
+            "-webkit-text-emphasis-style",
+            "text-emphasis-style",
+            "text-decoration",
+            "-webkit-text-decoration-color",
+            "text-decoration-color",
+            "-webkit-text-decoration-style",
+            "text-decoration-style",
+            "-webkit-text-decoration-line",
+            "text-decoration-line",
+            "text-underline-position",
+            "text-shadow"
+          ],
+          [
+            "image-rendering",
+            "image-orientation"
+          ],
+          [
+            "object-fit",
+            "object-position",
+            "z-index",
+            "zoom",
+            "clip",
+            "resize",
+            "cursor",
+            "visibility",
+            "counter-reset",
+            "counter-increment",
+            "content",
+            "will-change",
+            "pointer-events",
+            "appearance",
+            "all"
+          ],
+          [
+            "-webkit-transform-style",
+            "transform-style",
+            "-webkit-transform",
+            "-ms-transform",
+            "transform",
+            "transform-box",
+            "-webkit-transform-origin",
+            "-ms-transform-origin",
+            "transform-origin",
+            "-webkit-perspective",
+            "perspective",
+            "-webkit-perspective-origin",
+            "perspective-origin",
+            "-webkit-backface-visibility",
+            "backface-visibility"
+          ],
+          [
+            "-webkit-transition",
+            "transition",
+            "-webkit-transition-delay",
+            "transition-delay",
+            "-webkit-transition-duration",
+            "transition-duration",
+            "-webkit-transition-property",
+            "transition-property",
+            "-webkit-transition-timing-function",
+            "transition-timing-function",
+            "-webkit-animation",
+            "animation",
+            "-webkit-animation-name",
+            "animation-name",
+            "-webkit-animation-duration",
+            "animation-duration",
+            "-webkit-animation-timing-function",
+            "animation-timing-function",
+            "-webkit-animation-delay",
+            "animation-delay",
+            "-webkit-animation-iteration-count",
+            "animation-iteration-count",
+            "-webkit-animation-direction",
+            "animation-direction",
+            "-webkit-animation-fill-mode",
+            "animation-fill-mode",
+            "-webkit-animation-play-state",
+            "animation-play-state"
+          ],
+          [
+            "$include media"
+          ]
+        ]
+    }
+}
