@@ -2,7 +2,8 @@
 css 属性书写顺序推荐
 
 根据 MDN 中 [CSS参考](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) 归纳整理。
-
+## update  
+添加 sublime CSScomb 插件的属性排序配置 CSScomb.sublime-settings.json
 ## summary  
 
 | 布局定位  
@@ -75,5 +76,4 @@ css 属性书写顺序推荐
 　　| 动画属性：animation...  
 
 更加详细的属性和参数请见 order.css  
-## update  
-添加 sublime CSScomb 插件的属性排序配置 CSScomb.sublime-settings.json
+
