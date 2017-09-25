@@ -1,4 +1,4 @@
-# orderCSS
+# note-css-order
 > css 属性书写顺序推荐，根据 [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS) 归纳整理。  
 > 需要查询完整的规范内容？[Selectors Level 4](https://drafts.csswg.org/selectors-4/)
 
