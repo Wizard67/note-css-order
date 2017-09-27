@@ -9,7 +9,7 @@
 ``` css
 
     /* Logical Combinations */
-    :any()                  /* 匹配 集合内指定 的元素 */
+    :any()                  /* 匹配 集合内指定 的元素(:matches) */
     :not(selector)          /* 排除 指定选择器 的元素 */
 
     /* Linguistic Pseudo-classes */
