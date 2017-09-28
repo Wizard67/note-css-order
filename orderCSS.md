@@ -1,11 +1,10 @@
 # note-css-order
-> css 属性书写顺序推荐，根据 [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS) 归纳整理。  
-> 需要查询完整的规范内容？[Selectors Level 4](https://drafts.csswg.org/selectors-4/)
+> CSS 伪类、伪元素、数据类型、规则、以及属性的速查列表，根据 [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS) 归纳整理。  
 
-
-## summary  
-
+* [Pseudo-classes 伪类]()
 ###  Pseudo-classes 伪类
+>需要查询完整的规范内容？[Selectors Level 4](https://drafts.csswg.org/selectors-4/)  
+
 ``` css
 
     /* Logical Combinations */
@@ -68,4 +67,27 @@
     :left                   /* 打印文档时左侧的样式 */
     :right                  /* 打印文档时右侧的样式 */
 
+```  
+
+### pseudo-elements 伪元素  
+>需要查询完整的规范内容？[CSS Pseudo-Elements Module Level 4](https://www.w3.org/TR/css-pseudo-4/)   
+
+``` css
+
+    /* Typographic Pseudo-elements */
+    ::first-line            /* 选取文字块首行字符 */
+    ::first-letter          /* 选取文字块首行首个字符 */
+
+    /* Highlight Pseudo-elements */
+    ::selection             /* 选取文档中高亮(反白)的部分*/
+    ::inactive-selection    /* 选取非活动状态时文档中高亮(反白)的部分*/
+    ::spelling-error        /* 选取被 UA 标记为拼写错误的文本 */
+    ::grammar-error         /* 选取被 UA 标记为语法错误的文本 */
+
+    /* Tree-Abiding Pseudo-elements */
+    ::before                /* 在选中元素中创建一个前置的子节点 */
+    ::after                 /* 在选中元素中创建一个后置的子节点 */
+    ::marker                /* 选取列表自动生成的项目标记符号 */
+    ::placeholder           /* 选取字段的占位符文本(提示信息) */
+    
 ```
