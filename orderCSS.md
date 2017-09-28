@@ -8,45 +8,69 @@
 ``` css
 
     /* Logical Combinations */
-    :any()                  /* 匹配 集合内指定 的元素(:matches) */
-    :not(selector)          /* 排除 指定选择器 的元素 */
+    :matches() /*:any()*/   /* 匹配 集合内指定 的元素 */
+    :not()                  /* 排除 满足指定关系 的元素 */
+    :has()                  /* 匹配 满足指定关系 的元素*/
+
 
     /* Linguistic Pseudo-classes */
-    :dir(ltr|rtl)           /* 匹配 设置dir(文字书写方向)属性 的元素 */
-    :lang(language-code)    /* 匹配 设置lang(定义元素语言)属性 的元素 */
+    :dir()                  /* 匹配 设置dir(文字书写方向)属性 的元素 */
+    :lang()                 /* 匹配 设置lang(定义元素语言)属性 的元素 */
+
 
     /* Location Pseudo-classes */
-    :any-link               /* 匹配 有链接锚点 的元素*/
+    :any-link               /* 匹配 任意有链接锚点 的元素*/
     :link                   /* 匹配 未处于访问记录中 的链接 */
     :visited                /* 匹配 处于访问记录中 的链接 */
     :target                 /* 匹配 URL指向的锚点 的元素 */
     :scope                  /* 匹配 设置scoped属性的style标签 的作用域 */
 
+
     /* User Action Pseudo-classes */
-    :hover                  /* 匹配 处于鼠标悬停 的元素 */
+    :hover                  /* 匹配 处于鼠标悬停状态 的元素 */
     :active                 /* 匹配 处于激活状态 的元素 */
     :focus                  /* 匹配 处于聚焦状态 的元素 */
+    :focus-ring             /* 匹配 处于聚焦状态元素 的UA样式(聚焦轮廓) */
     :focus-within           /* 匹配 子节点处于聚焦状态 的元素 */
+    :drop                   /* 匹配 处于拖拽状态 的元素 */
+    :drop()                 /* 匹配 处于指定拖拽状态 的元素 */
+
+
+    /* Time-dimensional Pseudo-classes */
+    :current                /* 匹配 处于当前状态 的定义了timeline属性的元素 */
+    :past                   /* 匹配 处于过去状态 的定义了timeline属性的元素 */
+    :future                 /* 匹配 处于将来状态 的定义了timeline属性的元素 */
+
+
+    /* Resource State Pseudos */
+    :playing                /* 匹配 处于播放状态 的元素 */
+    :paused                 /* 匹配 处于暂停状态 的元素 */
+
 
     /* The Input Pseudo-classes */
     :enabled                /* 匹配 可以编辑 的元素 */
     :disabled               /* 匹配 禁止编辑 的元素 */
     :read-only              /* 匹配 内容只读 的元素 */
     :read-write             /* 匹配 内容可编辑 的元素 */
+    :placeholder-shown      /* 匹配 显示字段占位符文本 的元素 */
     :default                /* 匹配 页面载入默认选中 的元素 */
+
     :checked                /* 匹配 选中状态 的元素 */
     :indeterminate          /* 匹配 模糊状态 的元素 */
+
     :valid                  /* 匹配 输入内容通过类型验证 的元素 */
     :invalid                /* 匹配 输入内容无法通过类型验证 的元素 */
     :in-range               /* 匹配 输入数值符合范围 的元素 */
     :out-of-range           /* 匹配 输入数值溢出范围 的元素 */
     :required               /* 匹配 设置必填属性 的元素 */
     :optional               /* 匹配 可选字段 的元素 */
+    :user-invalid           /* 匹配 用户输入内容未通过验证 的元素 */
 
     /* Tree-Structural pseudo-classes */
     :root                   /* 匹配 文档树 的根元素*/
     :empty                  /* 匹配 无子节点 的元素 */
-    
+    :blank                  /* 匹配 仅包含空格或者换行符 的元素 */
+
     :nth-child(n)           /* 匹配 符合元素集合中指定位置 的元素 */
     :nth-last-child(n)      /* 反序匹配 符合元素集合内指定位置 的元素 */
     :first-child            /* 匹配 符合元素集合内首个 的元素 */
@@ -59,8 +83,10 @@
     :last-of-type           /* 匹配 每个在元素集合中末次出现 的元素 */
     :only-of-type           /* 匹配 无同类兄弟节点 的元素*/
 
+
     /* Fullscreen API */
     :fullscreen             /* 匹配 全屏显示模式中 的元素 */
+
 
     /* Page Selectors */
     :first                  /* 打印文档时首页的样式 */
