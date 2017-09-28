@@ -17,6 +17,7 @@
     :lang(language-code)    /* 匹配 设置lang(定义元素语言)属性 的元素 */
 
     /* Location Pseudo-classes */
+    :any-link               /* 匹配 有链接锚点 的元素*/
     :link                   /* 匹配 未处于访问记录中 的链接 */
     :visited                /* 匹配 处于访问记录中 的链接 */
     :target                 /* 匹配 URL指向的锚点 的元素 */
@@ -26,6 +27,7 @@
     :hover                  /* 匹配 处于鼠标悬停 的元素 */
     :active                 /* 匹配 处于激活状态 的元素 */
     :focus                  /* 匹配 处于聚焦状态 的元素 */
+    :focus-within           /* 匹配 子节点处于聚焦状态 的元素 */
 
     /* The Input Pseudo-classes */
     :enabled                /* 匹配 可以编辑 的元素 */
