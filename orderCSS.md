@@ -117,4 +117,9 @@
     ::marker                /* 选取列表自动生成的项目标记符号 */
     ::placeholder           /* 选取字段的占位符文本(提示信息) */
     
-```
+    /* WebVTT Format */
+    ::cue                   /* 匹配所选元素中 WebVTT 提示 */
+
+    /* Fullscreen API */
+    ::backdrop              /* 匹配全屏模式下的背景 */
+```   
