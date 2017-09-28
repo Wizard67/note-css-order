@@ -1,7 +1,8 @@
 # note-css-order
-> CSS 伪类、伪元素、数据类型、规则、以及属性的速查列表，根据 [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS) 归纳整理。  
+> CSS 伪类、伪元素、规则、以及属性的速查列表，根据 [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS) 归纳整理。  
 
 * [Pseudo-classes 伪类]()
+* [pseudo-elements 伪元素]()
 ###  Pseudo-classes 伪类
 >需要查询完整的规范内容？[Selectors Level 4](https://drafts.csswg.org/selectors-4/)  
 
