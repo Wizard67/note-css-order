@@ -11,7 +11,7 @@
 div {
   /*/设置元素的定位方式，为元素定义定位规则。*/
   position: static | relative | relative | fixed | *sticky;
-  /*->!position:static，使定位元素产生位置偏移*/
+  [fix]/* 使定位后的元素产生位置偏移 */
   top: <length> | <percentages> | auto;
   right: <length> | <percentages> | auto;
   bottom: <length> | <percentages> | auto;
@@ -19,8 +19,8 @@ div {
 
 	/*使一个元素脱离正常的文档流，然后被安放到它所在容器的的左端或者右端，并且其他的文本和行内元素围绕它安放。*/
 	float: none | left | right;
-	/*是否清除浮动*/
-	clear: none | left | right | both | *inline-start | *inline-end;
+	[fix]/* 是否清除浮动 */
+	clear: none | left | right | both | inline-start | inline-end;
 
 
   /*指定元素渲染出来的盒类型*/
@@ -55,11 +55,11 @@ div {
 	  table-layout: auto | fixed;
 	  /*->table ,隐藏表格中空单元格上的边框和背景*/
 	  empty-cells: show | hide;
-	  /*规定表格标题放置位置*/
-	  caption-side: top | bottom | *left | *right | *top-outside | *bottom-outside;
-	  /*->table ,决定表格的边框是分开的还是合并*/
+	  [fix]/* 规定表格标题放置位置 */
+	  caption-side: top | bottom | block-start | block-end | inline-start | inline-end;
+	  [fix]/* 声明表格的边框是分隔还是合并 */
 	  border-collapse: collapse | separate;
-	  /*->table ,设置相邻单元格之间的边距*/
+	  [fix]/* 设置相邻单元格边框之间的边距 */
 	  border-spacing: <length> ;
 
 	  /*->dispaly:list-item，设置列表符号*/
@@ -72,7 +72,7 @@ div {
 	    list-style-image: none | <image>;
 
 
-  /*改变默认的 CSS 盒模型 对元素宽高的计算方式*/
+  [fix]/* 改变默认的CSS盒模型对元素宽高的计算方式 */
   box-sizing: content-box | border-box;
 	  /*属性指定了元素内容区的宽度。*/
 	  width: <length> | <percentage> | auto | -max-content | -min-content | -fill-available | -fit-content;
@@ -95,60 +95,60 @@ div {
 	    padding-bottom: ;
 	    padding-left: ;
 
-	  [fix]/* 声明边界属性 */
+	  [fix]/* 声明边框属性 */
 	  [-] border: ;
-	    /*声明统一边框宽度*/
+	    /* 声明边框宽度 */
 	    [-] border-width: <length> | thin | medium | thick;
 	      border-top-width: ;
 	      border-right-width: ;
 	      border-bottom-width: ;
 	      border-left-width: ;
-	    /*声明统一边框样式*/
-	    [-] border-style: none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outse;
+	    /* 声明边框样式*/
+	    [-] border-style: none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset;
 	      border-top-style: ;
 	      border-right-style: ;
 	      border-bottom-style: ;
 	      border-left-style: ;
-	    /*声明统一边框颜色*/
+	    /* 声明边框颜色 */
 	    [-] border-color: <color>;
 	      border-top-color: ;
 	      border-right-color: ;
 	      border-bottom-color: ;
 	      border-left-color: ;
-	    /*声明统一边框图片样式，会覆盖 border-style，简写值为 none*/
-	    [-] border-image:;
-	      /*定义图片存放路径*/
-	      border-image-source: none | <image> | -<linear-gradient()>;
-	      /*规定图像边框的向内偏移*/
+	    /* 声明边框图片样式，会覆盖 border-style */
+	    [-] border-image: ;
+	      /* 图片资源路径 */ 
+	      border-image-source: none | <image>;
+	      /* 图像边框的向内偏移 */
 	      border-image-slice: <number> | <percentage> | fill;
-	      /*定义边框宽度，会覆盖 border-width 属性*/
+	      /* 边框宽度，会覆盖 border-width 属性 */
 	      border-image-width: <length> | <percentage> | <number> | auto;
-	      /*属性定义边框图像可超出边框盒的大小*/
+	      /* 边框图像可超出边框盒的大小 */
 	      border-image-outset: <length> | <number>;
-	      /*定义图片如何填充边框*/
+	      /* 图片如何填充边框 */
 	      border-image-repeat: stretch | repeat | round;
-	    /*简写上边框的所有属性*/
+	    /* 声明上边框的属性 */
 	    [-] border-top: ;
 	      border-top-width: ;
 	      border-top-style: ;
 	      border-top-color: ;
-	    /*简写右边框的所有属性*/
+	    /* 声明右边框的属性 */
 	    [-] border-right: ;
 	      border-right-width: ;
 	      border-right-style: ;
 	      border-right-color: ;
-	    /*简写下边框的所有属性*/
+	    /* 声明下边框的属性 */
 	    [-] border-bottom: ;
 	      border-bottom-width: ;
 	      border-bottom-style: ;
 	      border-bottom-color: ;
-	    /*简写左边框的所有属性*/
+	    /* 声明左边框的属性 */
 	    [-] border-left: ;
 	      border-left-width: ;
 	      border-left-style: ;
 	      border-left-color: ;
-	  /*设置边框圆角，可影响 background*/
-	  [-] border-radius: <length> | <percentage> (1,4 : 1/.);
+	  /* 设置边框圆角 */
+	  [-] border-radius: <length> | <percentage>;
 	    border-top-right-radius: ;
 	    border-bottom-right-radius: ;
 	    border-bottom-left-radius: ;
@@ -194,7 +194,7 @@ div {
 	  [fix] /* 背景图片以及背景色的混合模式 */
 	  background-blend-mode: <blend-mode>;
 
-	  /*描述一个或多个阴影效果，可受 border-radius 影响*/
+	  [fix]/* 设置元素投影 */
 	  box-shadow: inset | <offset-x> <offset-y> | <blur-radius> | <spread-radius> | <color>;
 
 	  /*指定了一个元素的透明度*/
@@ -203,26 +203,28 @@ div {
 	  -filter: <filter-function> (1,n);
 
 
-  /*设置列属性*/
-  columns: ;
-    /*设置列的宽度*/
-    -column-width: <length> | auto;
-    /*设置被划分的列数*/
-    -column-count: <integer> | auto;
-  /*设置元素列之间的间隔大小*/
-  -column-gap: <length> | normal;
-  /*列之间的宽度、样式和颜色*/
-  -column-rule: ;
-    /*设置列之间的宽度*/
-    -column-rule-width: <length> | thin | medium | thick;
-    /*设置列之间的分割样式*/
-    -column-rule-style: none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset;
-    /*设置列之间的颜色*/
-    -column-rule-color: <color>;
-  /*规定元素横跨多少列*/
-  -column-span: none | all;
+  [fix]/* 设置列属性 */
+  [-] columns: ;
+    /* 设置列的宽度 */
+    column-width: <length> | auto;
+    /* 设置被划分的列数 */
+    column-count: <number> | auto;
+  [fix]/* 声明列之间的间隔 */
+  column-gap: <length> | normal;
+  [fix]/* 声明列的样式 */
+  [-] column-rule: ;
+    /* 列之间的宽度 */
+    column-rule-width: <length> | thin | medium | thick;
+    /* 列之间的分割样式 */
+    column-rule-style: none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset;
+    /* 列之间的颜色 */
+    column-rule-color: <color>;
+  [fix]/* 规定元素横跨列数 */
+  column-span: none | all;
   /*指定留在页面底部元素最小行的数量*/
   orphans: <integer>;
+	[fix]/* 声明内容如何分割成列 */
+	column-fill: auto | balance;
 
 
   /*规定了内容元素溢出时的处理*/
@@ -269,7 +271,7 @@ div {
 	    /*指定 line-box 的高度*/
 	    line-height: normal | <number> | <length> | <percentage>;
 
-	  /*为元素的文本设置前景色*/
+	  [fix]/* 设置元素前景色 */
 	  color: <color>;
 
 	  /*设置open type 字体样式集，https://blogs.msdn.microsoft.com/ie_cn/2012/01/17/css-4*/
@@ -338,21 +340,27 @@ div {
   z-index: <-integer> | auto;
   /*设置元素的缩放*/
   *zoom: auto | <number> | <percentage>;
-  /*—>position:absolute，对元素进行裁剪*/
-  clip: <shape> | auto;
+
+  [fix]/* 对元素进行裁剪（遮罩层）*/
+  clip-path: url | none | <basic-shape> | <geometry-box>;
+
 	/*是否可由用户调整元素的尺寸*/
 	resize: none | both | horizontal | vertical | block | inline;
-  /*定义鼠标悬浮手势*/
-  cursor: auto | default | none | *context-menu | help | pointer | progress | wait | cell | crosshair | text | vertical-text | alias | copy | move | no-drop | not-allowed | e-resize | n-resize | ne-resize | nw-resize | s-resize | se-resize | sw-resize | w-resize | ew-resize | ns-resize | nesw-resize | nwse-resize | col-resize | row-resize | all-scroll | -zoom-in | -zoom-out | *grab | *grabbing | *<image>;
+  [fix]/* 声明鼠标悬浮样式 */
+  cursor:  <url> | auto | default | none | context-menu | help | pointer | progress | wait | cell | crosshair | text | vertical-text | alias | copy | move | no-drop | not-allowed | e-resize | n-resize | ne-resize | nw-resize | s-resize | se-resize | sw-resize | w-resize | ew-resize | ns-resize | nesw-resize | nwse-resize | col-resize | row-resize | all-scroll | -zoom-in | -zoom-out | grab | grabbing;
+
+	[fix]/* 声明插入光标的颜色 */
+	caret-color: auto | <color>;
+
   /*隐藏元素，并将其所占空间用空白占位*/
   visibility: visible | hidden | collapse;
 
-  /*计数器设置初始值*/
+  [fix]/* 为计数器设置初始值 */
   counter-reset: <custom-ident> <integer> | none;
-   /*对元素进行编号*/
+  [fix]/* 为元素添加计数器 */
   counter-increment: <custom-ident> <integer> | none;
-  /*->*:before|*:after；用于在元素的  ::before 和 ::after 伪元素中插入内容*/
-  content: none | normal | <string> | <image> | <counter> | <attr()> | open-quote | close-quote | no-open-quote | no-close-quote;
+  /* 在::before和::after中插入内容*/
+  content: none | normal | <string> | <uri> | <counter> | attr() | open-quote | close-quote | no-open-quote | no-close-quote;
 
   /*为将要改变的元素提前做优化准备工作*/
   *will-change: auto | scroll-position | contents | <custom-ident>;
