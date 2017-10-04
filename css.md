@@ -42,12 +42,12 @@ div {
 		flex-direction: row | row-reverse | column | column-reverse;
 		[fix]/* 声明是否允许换行 */
 		flex-wrap: nowrap | wrap | wrap-reverse;
-	/*定义了浏览器如何分配顺着父容器主轴的弹性 flex 元素之间及其周围的空间*/
-	justify-content: flex-start | flex-end | center | space-between | space-around;
 
+	[fix]/* 声明项目在主轴上的位置和空间分配 */
+	justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
 	[fix]/* 声明如何分配多行弹性容器中侧轴的空间位置 */
 	align-content: flex-start | flex-end | center | space-between | space-around | stretch;
-	[fix]/* 声明弹性容器中侧轴上项目的对齐方式 */
+	[fix]/* 声明项目在侧轴上的位置和空间分配 */
 	align-items: flex-start | flex-end | center | baseline | stretch;
 	[fix]/* 单独声明项目在弹性容器侧轴上的对齐方式 */
 	align-self: auto | flex-start | flex-end | center | baseline | stretch;
@@ -142,7 +142,7 @@ div {
 	  /*属性用来给元素内容区设置最大宽度值。*/
 	  max-width: none | <length> | <percentage> | -max-content | -min-content | -fill-available | -fit-content;
 
-	  /*属性指定了元素内容区的高度。*/
+	  [fix]/* 指定了元素内容区的高度 */
 	  height: <length> | <percentage> | auto;
 	  /*属性为给定元素设置最小高度。*/
 	  min-height: <length> | <percentage> | -max-content | -min-content | -fill-available | -fit-content;
@@ -252,8 +252,10 @@ div {
 	    /* 背景色 */
 	    background-color: <color> | transparent;
 
-	  [fix] /* 背景图片以及背景色的混合模式 */
+	  [fix]/* 背景图片以及背景色的混合模式 */
 	  background-blend-mode: <blend-mode>;
+		[fix]/* 定义元素是否创建新的混合环境 */
+		isolation: auto | isolate;
 
 	  [fix]/* 设置元素投影 */
 	  box-shadow: inset | <offset-x> <offset-y> | <blur-radius> | <spread-radius> | <color>;
@@ -362,8 +364,8 @@ div {
 	  overflow-wrap ( word-wrap ): normal | break-word;
 	  /*指定怎样在单词内断行*/
 	  word-break: normal | break-all | keep-all;
-	  /*告知浏览器在换行时如何使用连字符连接单词*/
-	  -hyphens: none | manual | auto;
+	  [fix]/* 西文文本换行时如何处理连字符 */
+	  hyphens: none | manual | auto;
 
 	  /*定义行内内容如何相对其块父级元素对齐*/
 	  text-align: left | right | center | justify | *start | *end | *<string> | *match-parent;
@@ -392,11 +394,12 @@ div {
 	  text-shadow: <color> | <offset-x> <offset-y> | <blur-radius>;
 
 
-  /*定义图片缩放算法*/
-  *image-rendering: auto | crisp-edges | pixelated;
-  /*修正图片的预设方向*/
-  *image-orientation: from-image | <angle> | flip;
-
+  [fix]/* 定义图片缩放算法 */
+  image-rendering: auto | crisp-edges | pixelated;
+  [fix]/* 修正图片的预设方向 */
+  image-orientation: from-image | <angle> | flip;
+	[fix]/* 设定图片分辨率 */
+	image-resolution: <resolution>;
 
   /*指定替换元素的内容应该如何适应容器*/
   object-fit: fill | contain | cover | none | scale-down;
@@ -418,7 +421,8 @@ div {
 
 	[fix]/* 声明插入光标的颜色 */
 	caret-color: auto | <color>;
-
+	[fix]/* 是否允许激活输入法（IME）状态 */
+	ime-mode: auto | normal | active | inactive | disabled;
   /*隐藏元素，并将其所占空间用空白占位*/
   visibility: visible | hidden | collapse;
 
