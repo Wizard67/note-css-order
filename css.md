@@ -9,7 +9,7 @@
 
 
 div {
-  /*/设置元素的定位方式，为元素定义定位规则。*/
+  /* 设置元素的定位方式，为元素定义定位规则 */
   position: static | relative | relative | fixed | *sticky;
   [fix]/* 使定位后的元素产生位置偏移 */
   top: <length> | <percentages> | auto;
@@ -17,59 +17,120 @@ div {
   bottom: <length> | <percentages> | auto;
   left: <length> | <percentages> | auto;
 
-	/*使一个元素脱离正常的文档流，然后被安放到它所在容器的的左端或者右端，并且其他的文本和行内元素围绕它安放。*/
-	float: none | left | right;
+	[fix]/* 元素浮动 */
+	float: left | right | none | inline-start | inline-end;
 	[fix]/* 是否清除浮动 */
 	clear: none | left | right | both | inline-start | inline-end;
 
+  [fix]/* 描述元素的盒子类型 */
+  display: none | inline | block | list-item | inline-list-item | inline-block | inline-table | table | table-cell | table-column | table-column-group | table-footer-group | table-header-group | table-row | table-row-group | flex | inline-flex | grid | inline-grid | run-in | ruby | ruby-base | ruby-text | ruby-base-container | ruby-text-container | contents;
 
-  /*指定元素渲染出来的盒类型*/
-  display: none | inline | block | inline-block | flex | list-item | table~;
-	  /*->display:flex，创建可伸缩项目*/
-	  flex: ;
-	    /*定义弹性盒子的拉伸因子*/
-	    flex-grow: <number>;
-	    /*定义弹性盒子的收缩规则*/
-	    flex-shrink: <number>;
-	    /*指定 flex item 在主轴方向的初始大小*/
-	    flex-basis: <length> | <percentages | *content;
-	  /*规定了弹性容器中的可伸缩项目在布局时的顺序*/
-	  order: <integer>;
-	  /*指定了内部元素是如何在flex容器中布局的，定义了主轴的方向*/
-	  flex-direction: row | row-reverse | column | column-reverse;
-	  /*描述了 flex 条目行的是被强制放在一行中或者是被放在多个行上*/
-	  flex-flow: nowrap | wrap | wrap-reverse;
-	  /*定义了浏览器如何分配顺着父容器主轴的弹性 flex 元素之间及其周围的空间*/
-	  justify-content: flex-start | flex-end | center | space-between | space-around;
+	[fix]/* 声明项目的空间分配 */
+	[-] flex: auto | initial | none | ...;
+	  [fix]/* 定义项目的拉伸因子 */
+	  flex-grow: <number>;
+	  [fix]/* 定义项目的收缩规则 */
+	  flex-shrink: <number>;
+	  [fix]/* 指定项目在主轴方向的初始大小 */
+	  flex-basis: <length> | <percentages> | content;
+	/*规定了弹性容器中的可伸缩项目在布局时的顺序*/
+	order: <integer>;
 
-	  [fix]/* 声明如何分配多行弹性容器中侧轴的空间位置 */
-	  align-content: flex-start | flex-end | center | space-between | space-around | stretch;
-      
-	  [fix]/* 声明弹性容器中侧轴上项目的对齐方式 */
-	  align-items: flex-start | flex-end | center | baseline | stretch;
+	[fix]/* 声明容器的主轴方向和换行规则 */
+	[-] flex-flow: ...;
+		[fix]/* 定义主轴的方向 */
+		flex-direction: row | row-reverse | column | column-reverse;
+		[fix]/* 声明是否允许换行 */
+		flex-wrap: nowrap | wrap | wrap-reverse;
+	/*定义了浏览器如何分配顺着父容器主轴的弹性 flex 元素之间及其周围的空间*/
+	justify-content: flex-start | flex-end | center | space-between | space-around;
 
-	  [fix]/* 单独声明项目在弹性容器侧轴上的对齐方式 */
-	  align-self: auto | flex-start | flex-end | center | baseline | stretch;
+	[fix]/* 声明如何分配多行弹性容器中侧轴的空间位置 */
+	align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+	[fix]/* 声明弹性容器中侧轴上项目的对齐方式 */
+	align-items: flex-start | flex-end | center | baseline | stretch;
+	[fix]/* 单独声明项目在弹性容器侧轴上的对齐方式 */
+	align-self: auto | flex-start | flex-end | center | baseline | stretch;
 
-	  /*->table ,定义了表格布局算法*/
-	  table-layout: auto | fixed;
-	  /*->table ,隐藏表格中空单元格上的边框和背景*/
-	  empty-cells: show | hide;
-	  [fix]/* 规定表格标题放置位置 */
-	  caption-side: top | bottom | block-start | block-end | inline-start | inline-end;
-	  [fix]/* 声明表格的边框是分隔还是合并 */
-	  border-collapse: collapse | separate;
-	  [fix]/* 设置相邻单元格边框之间的边距 */
-	  border-spacing: <length> ;
+	[fix]/* 声明网格布局属性 */
+	[-] grid: ;
+		[fix]/**/
+		grid-template-rows: ;
+		[fix]/**/
+		grid-template-columns: ;
+		[fix]/**/
+		grid-template-areas: ;
+		[fix]/**/
+		grid-auto-rows: ;
+		[fix]/**/
+		grid-auto-columns:  ;
+		[fix]/**/
+		grid-auto-flow:  ;
+		[fix]/**/
+		grid-column-gap:  ;
+		[fix]/**/
+		grid-row-gap: ;
 
-	  /*->dispaly:list-item，设置列表符号*/
- 		list-style: ;
-	    /*列表符号外观*/
-	    list-style-type: none | <counter-style> | <string>;
-	    /*列表符号定位*/
-	    list-style-position: inside | outside;
-	    /*指定图片作为列表符号*/
-	    list-style-image: none | <image>;
+	[fix]/* */
+	[-] grid-area: ;
+		[fix]/**/
+		grid-row-start: ;
+		[fix]/**/
+		grid-column-start: ;
+		[fix]/**/
+		grid-row-end: ;	
+		[fix]/**/
+		grid-column-end: ;
+
+	[fix]/* */
+	[-] grid-column: ;
+		[fix]/**/
+		grid-column-start: ;
+		[fix]/**/
+		grid-column-end: ;
+
+	[fix]/* */
+	[-] grid-gap: ;
+		[fix]/**/
+		grid-row-gap: ;
+		[fix]/**/
+		grid-column-gap: ;
+
+	[fix]/* */
+	[-] grid-row: ;
+		[fix]/**/
+		grid-row-start: ;
+		[fix]/**/
+		grid-row-end: ;
+
+	[fix]/* */
+	[-] grid-template: ;
+		[fix]/**/
+		grid-template-rows: ;
+		[fix]/**/
+		grid-template-columns: ;
+		[fix]/**/
+		grid-template-areas: ;
+	
+	/*->table ,定义了表格布局算法*/
+	table-layout: auto | fixed;
+	[fix]/* 表格空单元格的样式显示处理 */
+	empty-cells: show | hide;
+	[fix]/* 规定表格标题放置位置 */
+	caption-side: top | bottom | block-start | block-end | inline-start | inline-end;
+	[fix]/* 声明表格的边框是分隔还是合并 */
+	border-collapse: collapse | separate;
+	[fix]/* 设置相邻单元格边框之间的边距 */
+	border-spacing: <length> ;
+
+	/*->dispaly:list-item，设置列表符号*/
+ 	list-style: ;
+	  /*列表符号外观*/
+	  list-style-type: none | <counter-style> | <string>;
+	  /*列表符号定位*/
+	  list-style-position: inside | outside;
+	  /*指定图片作为列表符号*/
+	  list-style-image: none | <image>;
 
 
   [fix]/* 改变默认的CSS盒模型对元素宽高的计算方式 */
@@ -199,8 +260,8 @@ div {
 
 	  /*指定了一个元素的透明度*/
 	  opacity: <number>;
-	  /*滤镜属性*/
-	  -filter: <filter-function> (1,n);
+	  [fix]/* 滤镜属性 */
+	  filter: <url> | <filter-function>;
 
 
   [fix]/* 设置列属性 */
@@ -249,24 +310,24 @@ div {
 	  -text-combine-upright: none | all | digits <integer>;
 	  /*->writing-mode:^horizontal-tb，控制字符方向*/
 	  *text-orientation: mixed | upright | sideways;
-	  /*规定文本书写方向*/
+	  [fix]/* 规定文本书写方向 */
 	  direction: ltr | rtl;
 	  /*双向排列*/
 	  unicode-bidi: normal | embed | bidi-override | -isolate | *isolate-override | *plaintext;
 
-	  /*文字效果样式*/
-	  font: ;
-	    /*选择字体的斜体样式*/
+	  [fix]/* 文本效果样式 */
+	  [-] font: caption | icon | menu | message-box | small-caption | status-bar | ...;
+	    [fix]/* 选择字体风格 */
 	    font-style: normal | italic | oblique;
-	    /*英文字体小写转换大写*/
-	    font-variant: small-caps | ...;
-	    /*指定了字体的粗细程度*/
+	    [fix]/* 西文字体小写转换大写 */
+	    font-variant: normal | none | small-caps...;
+	    [fix]/* 指定字重 */
 	    font-weight: normal | bold｜lighter | bolder | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
-	    /*对字体进行拉伸*/
-	    *font-stretch: normal | ultra-condensed | extra-condensed | condensed | semi-condensed | semi-expanded | expanded | extra-expanded | ultra-expanded;
-	    /*定义字体大小*/
+	    [fix]/* 对字体进行变形 */
+	    font-stretch: normal | ultra-condensed | extra-condensed | condensed | semi-condensed | semi-expanded | expanded | extra-expanded | ultra-expanded;
+	    [fix]/* 字体大小 */
 	    font-size: <length> | <percentage> | larger | smaller | xx-small | x-small | small | medium | large | x-large | xx-large;
-	    /*由字体名或者字体族名组成的列表来为选定的元素设置字体*/
+	    [fix]/* 声明渲染字体 */
 	    font-family: <family-name> | <generic-name>;
 	    /*指定 line-box 的高度*/
 	    line-height: normal | <number> | <length> | <percentage>;
@@ -274,18 +335,24 @@ div {
 	  [fix]/* 设置元素前景色 */
 	  color: <color>;
 
-	  /*设置open type 字体样式集，https://blogs.msdn.microsoft.com/ie_cn/2012/01/17/css-4*/
-	  -font-feature-settings: normal | <feature-tag-value>;
+	  [fix]/* 设置OpenType字体样式集，https://blogs.msdn.microsoft.com/ie_cn/2012/01/17/css-4 */
+	  font-feature-settings: normal | <feature-tag-value>;
+		[fix]/* 声明OpenType文本的语言渲染处理 */
+		font-language-override: normal | <string>;
 
 	  /*如何处理元素中的空白符*/
 	  white-space: normal | pre | nowrap | pre-wrap | pre-line;
 	  /*->white-space:nowrap; overflow: hidden;文本溢出处理*/
 	  text-overflow: clip | ellipsis | *<string>;
 
+		[fix]/* 字体合成 */
+		font-synthesis: none | weight | style;
+		[fix]/* 定义字体的aspect值（字体的小写字母x的高度与font-size高度之间的比率被称为一个字体的 aspect 值） */
+		font-size-adjust: none | <number>;
 	  /*定义字间距*/
 	  letter-spacing: normal | <length>;
 
-	  /*控制英文字符间的空白*/
+	  [fix]/* 控制西文字符间隙距离 */
 	  font-kerning: auto | normal | none;
 	  /*声明标签和单词的间距*/
 	  word-spacing: normal | <length> | <percentage>;
