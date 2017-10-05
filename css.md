@@ -9,8 +9,8 @@
 
 
 div {
-  /* 设置元素的定位方式，为元素定义定位规则 */
-  position: static | relative | relative | fixed | *sticky;
+  [fix]/* 设置元素的定位方式 */
+  position: static | relative | absolute | fixed | sticky;
   [fix]/* 使定位后的元素产生位置偏移 */
   top: <length> | <percentages> | auto;
   right: <length> | <percentages> | auto;
@@ -33,16 +33,12 @@ div {
 	  flex-shrink: <number>;
 	  [fix]/* 指定项目在主轴方向的初始大小 */
 	  flex-basis: <length> | <percentages> | content;
-	/*规定了弹性容器中的可伸缩项目在布局时的顺序*/
-	order: <integer>;
-
 	[fix]/* 声明容器的主轴方向和换行规则 */
 	[-] flex-flow: ...;
 		[fix]/* 定义主轴的方向 */
 		flex-direction: row | row-reverse | column | column-reverse;
 		[fix]/* 声明是否允许换行 */
 		flex-wrap: nowrap | wrap | wrap-reverse;
-
 	[fix]/* 声明项目在主轴上的位置和空间分配 */
 	justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
 	[fix]/* 声明如何分配多行弹性容器中侧轴的空间位置 */
@@ -51,9 +47,12 @@ div {
 	align-items: flex-start | flex-end | center | baseline | stretch;
 	[fix]/* 单独声明项目在弹性容器侧轴上的对齐方式 */
 	align-self: auto | flex-start | flex-end | center | baseline | stretch;
+	[fix]/* 项目在弹性容器中的排序权重 */
+	order: <integer>;
+
 
 	[fix]/* 声明网格布局属性 */
-	[-] grid: ;
+	[-] grid: ...;
 		[fix]/**/
 		grid-template-rows: ;
 		[fix]/**/
@@ -72,7 +71,7 @@ div {
 		grid-row-gap: ;
 
 	[fix]/* */
-	[-] grid-area: ;
+	[-] grid-area: ...;
 		[fix]/**/
 		grid-row-start: ;
 		[fix]/**/
@@ -83,28 +82,28 @@ div {
 		grid-column-end: ;
 
 	[fix]/* */
-	[-] grid-column: ;
+	[-] grid-column: ...;
 		[fix]/**/
 		grid-column-start: ;
 		[fix]/**/
 		grid-column-end: ;
 
 	[fix]/* */
-	[-] grid-gap: ;
+	[-] grid-gap: ...;
 		[fix]/**/
 		grid-row-gap: ;
 		[fix]/**/
 		grid-column-gap: ;
 
 	[fix]/* */
-	[-] grid-row: ;
+	[-] grid-row: ...;
 		[fix]/**/
 		grid-row-start: ;
 		[fix]/**/
 		grid-row-end: ;
 
 	[fix]/* */
-	[-] grid-template: ;
+	[-] grid-template: ...;
 		[fix]/**/
 		grid-template-rows: ;
 		[fix]/**/
@@ -124,7 +123,7 @@ div {
 	border-spacing: <length> ;
 
 	[fix]/* 设置列表符号 */
- 	[-] list-style: ;
+ 	[-] list-style: ...;
 	  [fix]/* 列表符号风格 */
 	  list-style-type: none | <counter-style> | <string>;
 	  [fix]/* 列表符号定位 */
@@ -149,15 +148,15 @@ div {
 	[fix]/* 为元素内容区设置最大高度值 */
 	max-height: none | <length> | <percentage> | max-content | min-content | fill-available | fit-content;
 
-	/*属性为元素声明内边距*/
-	padding: <length> | <percentage> (1,4);
+	[fix]/* 为元素声明内边距 */
+	[-] padding: <length> | <percentage>;
 	  padding-top: ;
 	  padding-right: ;
 	  padding-bottom: ;
 	  padding-left: ;
 
 	[fix]/* 声明边框属性 */
-	[-] border: ;
+	[-] border: ...;
 	    /* 声明边框宽度 */
 	    [-] border-width: <length> | thin | medium | thick;
 	      border-top-width: ;
@@ -215,30 +214,26 @@ div {
 	    border-bottom-left-radius: ;
 	    border-top-left-radius: ;
 
-	/*为元素设置一个或多个独立的轮廓*/
-	outline: ;
-	  /*设置轮廓宽度*/
-	  outline-width: thin | medium | thick | <length>;
-	  /*为轮廓设置颜色*/
+	[fix]/* 为元素设置轮廓线 */
+	[-] outline: ...;
+	  [fix]/* 设置轮廓线宽度 */
+	  outline-width: <length> | thin | medium | thick;
+	  [fix]/* 为轮廓线设置颜色 */
 	  outline-color: <color> | inver;
-	  /*为轮廓设置样式*/
+	  [fix]/* 轮廓线风格 */
 	  outline-style: auto | none | dotted | dashed | solid | double | groove | ridge | inset | outset;
-	/*对轮廓进行偏移，并在边框边缘进行绘制*/
+	[fix]/* 对轮廓进行偏移 */
 	outline-offset: <length>;
 
 	[fix]/* 为元素声明外边距 */
-	[-] margin: ...;
-		[fix]/* 为元素声明顶部外边距 */
-	  margin-top: <length> | <percentage> | auto;
-		[fix]/* 为元素声明右侧外边距 */
-	  margin-right: <length> | <percentage> | auto;
-		[fix]/* 为元素声明底部外边距 */
-	  margin-bottom: <length> | <percentage> | auto;
-		[fix]/* 为元素声明左侧外边距 */
-	  margin-left: <length> | <percentage> | auto;
+	[-] margin: <length> | <percentage> | auto;
+	  margin-top: ;
+	  margin-right: ;
+	  margin-bottom: ;
+	  margin-left: ;
 
 	[fix]/* 声明背景属性 */
-	[-] background: ;
+	[-] background: ...;
 	  /* 为元素设置一个或多个背景图像 */
 	  background-image: none | <image>;
 	  /* 背景图片的初始位置 */
@@ -264,14 +259,14 @@ div {
 	[fix]/* 设置元素投影 */
 	box-shadow: inset | <offset-x> <offset-y> | <blur-radius> | <spread-radius> | <color>;
 
-	/*指定了一个元素的透明度*/
+	[fix] /* 设置透明度 */
 	opacity: <number>;
 	[fix]/* 滤镜属性 */
 	filter: <url> | <filter-function>;
 
 
   [fix]/* 设置列属性 */
-  [-] columns: ;
+  [-] columns: ...;
     /* 设置列的宽度 */
     column-width: <length> | auto;
     /* 设置被划分的列数 */
@@ -279,7 +274,7 @@ div {
   [fix]/* 声明列之间的间隔 */
   column-gap: <length> | normal;
   [fix]/* 声明列的样式 */
-  [-] column-rule: ;
+  [-] column-rule: ...;
     /* 列之间的宽度 */
     column-rule-width: <length> | thin | medium | thick;
     /* 列之间的分割样式 */
@@ -288,17 +283,17 @@ div {
     column-rule-color: <color>;
   [fix]/* 规定元素横跨列数 */
   column-span: none | all;
-  /*指定留在页面底部元素最小行的数量*/
+  [fix]/* 指定留在容器底部元素最小行的数量 */
   orphans: <integer>;
 	[fix]/* 声明内容如何分割成列 */
 	column-fill: auto | balance;
 
 
-  /*规定了内容元素溢出时的处理*/
-  overflow: visible | hidden | scroll | auto;
-    /*水平溢出的处理*/
+  [fix]/* 规定了内容溢出容器时的处理 */
+  overflow: ...;
+    [fix]/* 水平溢出的处理 */
     overflow-x: visible | hidden | scroll | auto;
-    /*垂直溢出的处理*/
+    [fix]/* 垂直溢出的处理 */
     overflow-y: visible | hidden | scroll | auto;
 
 
@@ -364,8 +359,8 @@ div {
 	  word-spacing: normal | <length> | <percentage>;
 	  /*控制文本的大小写*/
 	  text-transform: none | capitalize | uppercase | lowercase;
-	  /*是否允许单词中断换行*/
-	  overflow-wrap ( word-wrap ): normal | break-word;
+	  [fix]/* 是否允许单词中断换行 */
+	  overflow-wrap(word-wrap): normal | break-word;
 	  /*指定怎样在单词内断行*/
 	  word-break: normal | break-all | keep-all;
 		[fix]/* 声明文本断行规则 */
@@ -407,9 +402,9 @@ div {
 	[fix]/* 设定图片分辨率 */
 	image-resolution: <resolution>;
 
-  /*指定替换元素的内容应该如何适应容器*/
+  [fix]/* 替换元素的内容如何适应容器 */
   object-fit: fill | contain | cover | none | scale-down;
-  /*确定替换元素的位置*/
+  [fix]/* 确定替换元素的位置 */
   object-position: left | center | right | top | bottom | <length> | <percentage>;
 
   /*当元素之间重叠的时候，决定哪一个元素覆盖在其余元素的上方显示。*/
@@ -420,7 +415,7 @@ div {
   [fix]/* 对元素进行裁剪 */
   clip-path: url | none | <basic-shape> | <geometry-box>;
 	[fix]/* 对元素使用遮罩 */
-	[-] mask: ;
+	[-] mask: ...;
 		[fix]/* 遮罩层图像 */
 		mask-image: none | <url>;
 		[fix]/* 遮罩层模式 */
@@ -466,8 +461,8 @@ div {
 
   /*为将要改变的元素提前做优化准备工作*/
   *will-change: auto | scroll-position | contents | <custom-ident>;
-  /*让元素事件不被鼠标捕获*/
-  pointer-events: auto | none;
+  [fix]/* 设置鼠标事件穿透 */
+  pointer-events: auto | none | visiblePainted | visibleFill | visibleStroke | visible | painted | fill | stroke | all | inherit;
 
   [fix] /* 重置除了 unicode-bidi 和 direction 之外的所有属性至初始值或继承值 */
   all: initial | inherit | unset;
@@ -484,14 +479,20 @@ div {
   /*更改元素变形的原点*/
   -transform-origin: <percentage> | <length> | left | center | right | top | bottom | center (1,3)
 
-  /*属性指定了观察者与z=0平面的距离，使具有三维位置变换的元素产生透视效果*/
+  [fix]/* 设置透视的观测距离 */
   perspective: none | <length>;
-  /*指定了观察者的位置，在属性perspective中被用作消失点*/
-  perspective-origin: <x-position> | <y-position> | <percentage> | <length> (1,2);
+  [fix]/* 设置透视的灭点位置 */
+  perspective-origin: <x-position> | <y-position> | <percentage> | <length>;
 
   [fix]/* 3d状态下，声明元素背面是否可见 */
   backface-visibility: visible | hidden;
 
+	[fix]/* 设置元素之前的分页符 */
+	page-break-before: auto | always | avoid | left | right;
+	[fix]/* 设置元素之后的分页符 */
+	page-break-after: auto | always | avoid | left | right;
+	[fix]/* 设置元素容器内的分页符 */
+	page-break-inside: auto | avoid;
 
   /*定义元素之间的过渡*/
   -transition: ;
@@ -506,22 +507,22 @@ div {
 
 
   [fix]/* 动画属性 */
-  [-] animation: ;
-    /* 指定应用声明过的动画标识 */
+  [-] animation: ...;
+    [fix]/* 指定应用声明过的动画标识 */
     animation-name: none | <animation-ident>;
-    /* 指定动画执行周期 */
+    [fix]/* 指定动画执行周期 */
     animation-duration: <time>;
-    /* 定义动画缓动函数 */
+    [fix]/* 定义动画缓动函数 */
     animation-timing-function: <timing-function>;
-    /* 定义延时 */
+    [fix]/* 定义延时 */
     animation-delay: <time>;
-    /* 定义动画循环次数 */
+    [fix]/* 定义动画循环次数 */
     animation-iteration-count: infinite | <number>;
-    /* 指示是否反向播放 */
+    [fix]/* 指示是否反向播放 */
     animation-direction: normal | reverse | alternate | alternate-reverse;
-    /* 指定动画执行前后的元素样式 */
+    [fix]/* 指定动画执行前后的元素样式 */
     animation-fill-mode: none | forwards | backwards | both;
-    /* 定义或查询一个动画的当前状态 */
+    [fix]/* 定义或查询一个动画的当前状态 */
     animation-play-state: running | paused;
 }
 
