@@ -373,7 +373,7 @@ div {
 	  /*规定如何对齐最后一行*/
 	  text-align-last: left | right | center | justify | auto | *start | *end;
 
-	  /*设置引用符号*/
+	  [fix]/* 为元素内容添加引用符号 */
 	  quotes: none | <string>;
 	  /*自定义制表符 (U+0009) 的宽度*/
 	  tab-size: <integer> | <length>;
@@ -393,6 +393,14 @@ div {
 	  *text-underline-position: auto | under | left | right | under left | right under;
 	  /*为文字添加阴影*/
 	  text-shadow: <color> | <offset-x> <offset-y> | <blur-radius>;
+
+
+	[fix]/* 设定alpha值提取图像形状 */
+	shape-image-threshold: <number>;
+	[fix]/* 为形状（shape）添加轮廓 */
+	shape-outside: none | <shape-box> | <basic-shape> | <url>;
+	[fix]/* 为形状（shape）添加外边距 */
+	shape-margin: <length> | <percentage>;
 
 
   [fix]/* 定义图片缩放算法 */
@@ -435,13 +443,17 @@ div {
 	[fix]/* <mask>标签中遮罩以亮度或是透明度呈现 */
 	mask-type: luminance | alpha;
 
-
-
+	[fix]/* 注释的对齐方式 */
+	ruby-align: start | center | space-between | space-around;
+	[fix]/* 在一个ruby容器内如何处理多个注释 */
+	ruby-merge: auto | collapse | separate;
+	[fix]/* 注释的放置位置 */
+	ruby-position: over | under | inter-character;
 	
 
 
-	/*是否可由用户调整元素的尺寸*/
-	resize: none | both | horizontal | vertical | block | inline;
+	[fix]/* 是否可由用户调整元素的尺寸 */
+	resize: none | both | horizontal | vertical;
   [fix]/* 声明鼠标悬浮样式 */
   cursor:  <url> | auto | default | none | context-menu | help | pointer | progress | wait | cell | crosshair | text | vertical-text | alias | copy | move | no-drop | not-allowed | e-resize | n-resize | ne-resize | nw-resize | s-resize | se-resize | sw-resize | w-resize | ew-resize | ns-resize | nesw-resize | nwse-resize | col-resize | row-resize | all-scroll | -zoom-in | -zoom-out | grab | grabbing;
 
@@ -493,6 +505,16 @@ div {
 	page-break-after: auto | always | avoid | left | right;
 	[fix]/* 设置元素容器内的分页符 */
 	page-break-inside: auto | avoid;
+
+	[fix]/* 导航或者CSSOM api产生滚动的过渡效果 */
+	scroll-behavior: auto | smooth;
+	[fix]/* 定义元素滚动的snap点类型 */
+	scroll-snap-type: none | mandatory | proximity;
+	[fix]/* 定义元素滚动的snap点坐标位置*/
+	scroll-snap-destination: <position>;
+	[fix]/* 定义元素滚动的snap点坐标偏移位置 */
+	scroll-snap-coordinate: none | <position>;
+
 
   /*定义元素之间的过渡*/
   -transition: ;
