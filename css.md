@@ -111,7 +111,7 @@ div {
 		[fix]/**/
 		grid-template-areas: ;
 	
-	/*->table ,定义了表格布局算法*/
+	[fix]/* 定义了表格布局算法 */
 	table-layout: auto | fixed;
 	[fix]/* 表格空单元格的样式显示处理 */
 	empty-cells: show | hide;
@@ -134,8 +134,8 @@ div {
 
   [fix]/* 改变默认的CSS盒模型对元素宽高的计算方式 */
   box-sizing: content-box | border-box;
-	/*属性指定了元素内容区的宽度。*/
-	width: <length> | <percentage> | auto | -max-content | -min-content | -fill-available | -fit-content;
+	[fix]/* 指定了元素内容区的宽度。*/
+	width: <length> | <percentage> | auto | max-content | min-content | fill-available | fit-content;
 	[fix] /* 为元素设置最小宽度 */
 	min-width: <length> | <percentage> | max-content | min-content | fill-available | fit-content;
 	[fix]/* 为元素内容区设置最大宽度值 */
@@ -297,24 +297,22 @@ div {
     overflow-y: visible | hidden | scroll | auto;
 
 
-  /*指定行内元素或表格单元格元素的垂直对齐方式*/
-  vertical-align: baseline | sub | super | text-top | text-bottom | middle | top | bottom | <percentage> | -<length>;
+  [fix]/* 指定行内元素或表格单元格元素的垂直对齐方式 */
+  vertical-align: baseline | sub | super | text-top | text-bottom | middle | top | bottom | <percentage> | <length>;
 
-
-
-  /*定义如何渲染字体*/
+  [fix]/* 定义如何渲染字体 */
   text-rendering: auto | optimizeSpeed | optimizeLegibility | geometricPrecision;
 
-	  /*规定文本的排版模式*/
-	  -writing-mode: horizontal-tb | vertical-rl | vertical-lr | sideways-rl | sideways-lr;
-	  /*->writing-mode:^horizontal-tb，纵横混排*/
-	  -text-combine-upright: none | all | digits <integer>;
-	  /*->writing-mode:^horizontal-tb，控制字符方向*/
-	  *text-orientation: mixed | upright | sideways;
+	  [fix]/* 规定文本的排版模式 */
+	  writing-mode: horizontal-tb | vertical-rl | vertical-lr | sideways-rl | sideways-lr;
+	  [fix]/* 纵横混排 */
+	  text-combine-upright: none | all | <integer>;
+	  [fix]/* 控制字符方向 */
+	  text-orientation: mixed | upright | sideways;
 	  [fix]/* 规定文本书写方向 */
 	  direction: ltr | rtl;
-	  /*双向排列*/
-	  unicode-bidi: normal | embed | bidi-override | -isolate | *isolate-override | *plaintext;
+	  [fix]/* 双向排列 */
+	  unicode-bidi: normal | embed | bidi-override | isolate | isolate-override | plaintext;
 
 	  [fix]/* 文本效果样式 */
 	  [-] font: caption | icon | menu | message-box | small-caption | status-bar | ...;
@@ -341,10 +339,10 @@ div {
 		[fix]/* 声明OpenType文本的语言渲染处理 */
 		font-language-override: normal | <string>;
 
-	  /*如何处理元素中的空白符*/
+	  [fix]/* 处理元素中的空白符 */
 	  white-space: normal | pre | nowrap | pre-wrap | pre-line;
-	  /*->white-space:nowrap; overflow: hidden;文本溢出处理*/
-	  text-overflow: clip | ellipsis | *<string>;
+	  [fix]/* 文本溢出处理 white-space:nowrap; overflow: hidden;*/
+	  text-overflow: clip | ellipsis | <string>;
 
 		[fix]/* 字体合成 */
 		font-synthesis: none | weight | style;
@@ -355,44 +353,54 @@ div {
 
 	  [fix]/* 控制西文字符间隙距离 */
 	  font-kerning: auto | normal | none;
-	  /*声明标签和单词的间距*/
+	  [fix]/* 声明标签和单词的间距 */
 	  word-spacing: normal | <length> | <percentage>;
-	  /*控制文本的大小写*/
-	  text-transform: none | capitalize | uppercase | lowercase;
+	  [fix]/* 控制文本大小写 */
+	  text-transform: none | capitalize | uppercase | lowercase | full-width;
 	  [fix]/* 是否允许单词中断换行 */
 	  overflow-wrap(word-wrap): normal | break-word;
-	  /*指定怎样在单词内断行*/
+	  [fix]/* 声明单词断行规则 */
 	  word-break: normal | break-all | keep-all;
 		[fix]/* 声明文本断行规则 */
 		line-break: auto | loose | normal | strict;
 	  [fix]/* 西文文本换行时如何处理连字符 */
 	  hyphens: none | manual | auto;
 
-	  /*定义行内内容如何相对其块父级元素对齐*/
-	  text-align: left | right | center | justify | *start | *end | *<string> | *match-parent;
-	  /*规定如何对齐最后一行*/
-	  text-align-last: left | right | center | justify | auto | *start | *end;
+	  [fix]/* 定义元素内的内容如何对齐  */
+	  text-align: start | end | left | right | center | justify | match-parent;
+	  [fix]/* 规定如何对齐末行元素 */
+	  text-align-last: auto | start | end | left | right | center | justify;
+		[fix]/* 文本两侧对齐时的空白填充方式 */
+		text-justify: auto | inter-character | inter-word | none;
 
 	  [fix]/* 为元素内容添加引用符号 */
 	  quotes: none | <string>;
-	  /*自定义制表符 (U+0009) 的宽度*/
+	  [fix]/* 制表符（U+0009）宽度 */
 	  tab-size: <integer> | <length>;
-	  /*首行文本缩进*/
-	  text-indent: <length> | <percentage> | *hanging | *each-line;
-	  /*文本进行重点标记*/
-	  -text-emphasis: ;
-	    -text-emphasis-color: <color>;
-	    -text-emphasis-position: over | under | *right | *left (1,2);
-	    -text-emphasis-style: none | open | dot | circle | double-circle | triangle | sesame | <string>;
-	  /*文本渲染修饰（下划线、顶划线、删除线）*/
-	  text-decoration: none | underline | overline | line-through | blink (1,4);
-	    *text-decoration-color: <color>;
-	    *text-decoration-style: solid | double | dotted | dashed | wavy;
-	    *text-decoration-line: none | underline | overline | line-through | blink;
-	  /*定义下划线位置*/
-	  *text-underline-position: auto | under | left | right | under left | right under;
-	  /*为文字添加阴影*/
-	  text-shadow: <color> | <offset-x> <offset-y> | <blur-radius>;
+	  [fix]/* 文本首行缩进 */
+	  text-indent: <length> | <percentage> | hanging | each-line;
+	  [fix]/* 文本重点标记 */
+	  [-] text-emphasis: ...;
+			[]fix/* 标记符号的类型 */
+			text-emphasis-style: none | open | dot | circle | double-circle | triangle | sesame | <string>;
+			[fix]/* 标记符号的颜色 */
+	    text-emphasis-color: <color>;
+		[fix]/* 文本重点标记的渲染位置 */
+	    text-emphasis-position: over | under | right | left;
+	    
+	  [fix]/* 文本修饰线 */
+	  [-] text-decoration: ...;
+			[fix]/* 文本修饰线的颜色 */
+	    text-decoration-color: <color>;
+			[fix]/* 文本修饰线的类型 */
+	    text-decoration-style: solid | double | dotted | dashed | wavy;
+			[fix]/* 文本修饰线的渲染位置 */
+	    text-decoration-line: none | underline | overline | line-through | blink;
+	  [fix]/* 文本下划线位置 */
+	  text-underline-position: auto | under | left | right | under left | right under;
+
+	  [fix]/* 文本阴影 */
+	  text-shadow: none | <color> | <offset-x> <offset-y> | <blur-radius>;
 
 
 	[fix]/* 设定alpha值提取图像形状 */
@@ -415,10 +423,11 @@ div {
   [fix]/* 确定替换元素的位置 */
   object-position: left | center | right | top | bottom | <length> | <percentage>;
 
-  /*当元素之间重叠的时候，决定哪一个元素覆盖在其余元素的上方显示。*/
-  z-index: <-integer> | auto;
-  /*设置元素的缩放*/
-  *zoom: auto | <number> | <percentage>;
+  [fix]/* 声明元素重叠时显示的权重 */
+  z-index: <integer> | auto;
+
+	[fix]/* 自定义属性 */
+	--*: ...;
 
   [fix]/* 对元素进行裁剪 */
   clip-path: url | none | <basic-shape> | <geometry-box>;
@@ -461,18 +470,20 @@ div {
 	caret-color: auto | <color>;
 	[fix]/* 是否允许激活输入法（IME）状态 */
 	ime-mode: auto | normal | active | inactive | disabled;
-  /*隐藏元素，并将其所占空间用空白占位*/
+	[fix]/* 隐藏元素保留空间位置 */
   visibility: visible | hidden | collapse;
 
+	[fix]/* 规定用户手势操作方式 */
+	touch-action: auto | none | pan-x | pan-left | pan-right | pan-y | pan-up | pan-down | pinch-zoom | manipulation;
   [fix]/* 为计数器设置初始值 */
   counter-reset: <custom-ident> <integer> | none;
   [fix]/* 为元素添加计数器 */
   counter-increment: <custom-ident> <integer> | none;
-  /* 在::before和::after中插入内容*/
+  [fix]/* 在::before和::after中插入内容*/
   content: none | normal | <string> | <uri> | <counter> | attr() | open-quote | close-quote | no-open-quote | no-close-quote;
 
-  /*为将要改变的元素提前做优化准备工作*/
-  *will-change: auto | scroll-position | contents | <custom-ident>;
+  [fix] /* 通知浏览器进行元素改变的优化 */
+  will-change: auto | scroll-position | contents | <custom-ident>;
   [fix]/* 设置鼠标事件穿透 */
   pointer-events: auto | none | visiblePainted | visibleFill | visibleStroke | visible | painted | fill | stroke | all | inherit;
 
@@ -481,15 +492,15 @@ div {
 
   /*设置元素表现样式*/
   -appearance：auto | none;
-  /*指定子元素空间状态（2d/3d）*/
-  -transform-style: flat | preserve-3d;
 
-  /*模型变形*/
-  -transform: none | <transform-function>;
-  /*模型 transform 参考*/
-  *transform-box: border-box | fill-box | view-box;
-  /*更改元素变形的原点*/
-  -transform-origin: <percentage> | <length> | left | center | right | top | bottom | center (1,3)
+  [fix]/* 子元素空间状态（2d/3d）*/
+  transform-style: flat | preserve-3d;
+  [fix]/* 元素变形 */
+  transform: none | <transform-function>;
+  [fix]/* 元素变形范围 */
+  transform-box: border-box | fill-box | view-box;
+  [fix]/* 元素变形的中心点*/
+  transform-origin: <percentage> | <length> | left | center | right | top | bottom | center;
 
   [fix]/* 设置透视的观测距离 */
   perspective: none | <length>;
@@ -505,6 +516,8 @@ div {
 	page-break-after: auto | always | avoid | left | right;
 	[fix]/* 设置元素容器内的分页符 */
 	page-break-inside: auto | avoid;
+	[fix]/* 页面打印时分页保留的最少行数 */
+	widows: <integer>;
 
 	[fix]/* 导航或者CSSOM api产生滚动的过渡效果 */
 	scroll-behavior: auto | smooth;
@@ -516,16 +529,16 @@ div {
 	scroll-snap-coordinate: none | <position>;
 
 
-  /*定义元素之间的过渡*/
-  -transition: ;
-    /*延迟过渡*/
-    -transition-delay: -<time>;
-    /*过渡效果执行时间*/
-    -transition-duration: <time>;
-    /*指定应用过渡属性*/
-    -transition-property: none | all | *<transition-ident>;
-    /*定义过渡到缓动函数*/
+  [fix]/* 定义元素过渡效果 */
+  [-] transition: none | ...;
+	  [fix]/* 指定需过渡的属性 */
+    transition-property: none | all | <transition-ident>;
+    [fix]/* 过渡效果执行时间 */
+    transition-duration: <time>;
+    [fix]/* 定义过渡缓动函数 */
     transition-timing-function: <timing-function>;
+    [fix]/* 延迟过渡 */
+    transition-delay: <time>;
 
 
   [fix]/* 动画属性 */
