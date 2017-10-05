@@ -123,41 +123,41 @@ div {
 	[fix]/* 设置相邻单元格边框之间的边距 */
 	border-spacing: <length> ;
 
-	/*->dispaly:list-item，设置列表符号*/
- 	list-style: ;
-	  /*列表符号外观*/
+	[fix]/* 设置列表符号 */
+ 	[-] list-style: ;
+	  [fix]/* 列表符号风格 */
 	  list-style-type: none | <counter-style> | <string>;
-	  /*列表符号定位*/
+	  [fix]/* 列表符号定位 */
 	  list-style-position: inside | outside;
-	  /*指定图片作为列表符号*/
-	  list-style-image: none | <image>;
+	  [fix]/* 指定图片作为列表符号 */
+	  list-style-image: none | <url>;
 
 
   [fix]/* 改变默认的CSS盒模型对元素宽高的计算方式 */
   box-sizing: content-box | border-box;
-	  /*属性指定了元素内容区的宽度。*/
-	  width: <length> | <percentage> | auto | -max-content | -min-content | -fill-available | -fit-content;
-	  /*属性为给定元素设置最小宽度。*/
-	  min-width: <length> | <percentage> | -max-content | -min-content | -fill-available | -fit-content;
-	  /*属性用来给元素内容区设置最大宽度值。*/
-	  max-width: none | <length> | <percentage> | -max-content | -min-content | -fill-available | -fit-content;
+	/*属性指定了元素内容区的宽度。*/
+	width: <length> | <percentage> | auto | -max-content | -min-content | -fill-available | -fit-content;
+	[fix] /* 为元素设置最小宽度 */
+	min-width: <length> | <percentage> | max-content | min-content | fill-available | fit-content;
+	[fix]/* 为元素内容区设置最大宽度值 */
+	max-width: none | <length> | <percentage> | max-content | min-content | fill-available | fit-content;
 
-	  [fix]/* 指定了元素内容区的高度 */
-	  height: <length> | <percentage> | auto;
-	  /*属性为给定元素设置最小高度。*/
-	  min-height: <length> | <percentage> | -max-content | -min-content | -fill-available | -fit-content;
-	  /*属性用来给元素内容区设置最大高度值。*/
-	  max-height: none | <length> | <percentage> | -max-content | -min-content | -fill-available | -fit-content;
+	[fix]/* 指定了元素内容区的高度 */
+	height: <length> | <percentage> | auto;
+	[fix]/* 为元素设置最小高度 */
+	min-height: <length> | <percentage> | max-content | min-content | fill-available | fit-content;
+	[fix]/* 为元素内容区设置最大高度值 */
+	max-height: none | <length> | <percentage> | max-content | min-content | fill-available | fit-content;
 
-	  /*属性为元素声明内边距*/
-	  padding: <length> | <percentage> (1,4);
-	    padding-top: ;
-	    padding-right: ;
-	    padding-bottom: ;
-	    padding-left: ;
+	/*属性为元素声明内边距*/
+	padding: <length> | <percentage> (1,4);
+	  padding-top: ;
+	  padding-right: ;
+	  padding-bottom: ;
+	  padding-left: ;
 
-	  [fix]/* 声明边框属性 */
-	  [-] border: ;
+	[fix]/* 声明边框属性 */
+	[-] border: ;
 	    /* 声明边框宽度 */
 	    [-] border-width: <length> | thin | medium | thick;
 	      border-top-width: ;
@@ -208,62 +208,66 @@ div {
 	      border-left-width: ;
 	      border-left-style: ;
 	      border-left-color: ;
-	  /* 设置边框圆角 */
-	  [-] border-radius: <length> | <percentage>;
+	/* 设置边框圆角 */
+	[-] border-radius: <length> | <percentage>;
 	    border-top-right-radius: ;
 	    border-bottom-right-radius: ;
 	    border-bottom-left-radius: ;
 	    border-top-left-radius: ;
 
-	  /*为元素设置一个或多个独立的轮廓*/
-	  outline: ;
-	    /*设置轮廓宽度*/
-	    outline-width: thin | medium | thick | <length>;
-	    /*为轮廓设置颜色*/
-	    outline-color: <color> | inver;
-	    /*为轮廓设置样式*/
-	    outline-style: auto | none | dotted | dashed | solid | double | groove | ridge | inset | outset;
-	  /*对轮廓进行偏移，并在边框边缘进行绘制*/
-	  outline-offset: <length>;
+	/*为元素设置一个或多个独立的轮廓*/
+	outline: ;
+	  /*设置轮廓宽度*/
+	  outline-width: thin | medium | thick | <length>;
+	  /*为轮廓设置颜色*/
+	  outline-color: <color> | inver;
+	  /*为轮廓设置样式*/
+	  outline-style: auto | none | dotted | dashed | solid | double | groove | ridge | inset | outset;
+	/*对轮廓进行偏移，并在边框边缘进行绘制*/
+	outline-offset: <length>;
 
-	  /*属性为元素声明外边距*/
-	  margin: <-length> | <percentage> | auto (1,4);
-	    margin-top: ;
-	    margin-right: ;
-	    margin-bottom: ;
-	    margin-left: ;
+	[fix]/* 为元素声明外边距 */
+	[-] margin: ...;
+		[fix]/* 为元素声明顶部外边距 */
+	  margin-top: <length> | <percentage> | auto;
+		[fix]/* 为元素声明右侧外边距 */
+	  margin-right: <length> | <percentage> | auto;
+		[fix]/* 为元素声明底部外边距 */
+	  margin-bottom: <length> | <percentage> | auto;
+		[fix]/* 为元素声明左侧外边距 */
+	  margin-left: <length> | <percentage> | auto;
 
-	  [fix]/* 声明背景属性 */
-	  [-] background: ;
-	    /* 为元素设置一个或多个背景图像 */
-	    background-image: none | <image>;
-	    /* 背景图片的初始位置 */
-	    background-position: left | center | right | top | bottom | <percentage> | <length>;
-	    /* 设置背景图片大小 */
-	    background-size: <length> | <percentage> | auto | cover | contain;
-	    /* 背景图片平铺方式 */
-	    background-repeat: no-repeat | repeat-x | repeat-y | repeat | space | round;
-	    /* 指定背景图片原点位置的背景相对区域 */
-	    background-origin: border-box | padding-box | content-box;
-	    /* 背景在元素内的覆盖范围 */
-	    background-clip: border-box | padding-box | content-box;
-	    /* 背景是否随跟随容器滚动 */
-	    background-attachment: fixed | local | scroll;
-	    /* 背景色 */
-	    background-color: <color> | transparent;
+	[fix]/* 声明背景属性 */
+	[-] background: ;
+	  /* 为元素设置一个或多个背景图像 */
+	  background-image: none | <image>;
+	  /* 背景图片的初始位置 */
+	  background-position: left | center | right | top | bottom | <percentage> | <length>;
+	  /* 设置背景图片大小 */
+	  background-size: <length> | <percentage> | auto | cover | contain;
+	  /* 背景图片平铺方式 */
+	  background-repeat: no-repeat | repeat-x | repeat-y | repeat | space | round;
+	  /* 指定背景图片原点位置的背景相对区域 */
+	  background-origin: border-box | padding-box | content-box;
+	  /* 背景在元素内的覆盖范围 */
+	  background-clip: border-box | padding-box | content-box;
+	  /* 背景是否随跟随容器滚动 */
+	  background-attachment: fixed | local | scroll;
+	  /* 背景色 */
+	  background-color: <color> | transparent;
 
-	  [fix]/* 背景图片以及背景色的混合模式 */
-	  background-blend-mode: <blend-mode>;
-		[fix]/* 定义元素是否创建新的混合环境 */
-		isolation: auto | isolate;
+	[fix]/* 背景图片以及背景色的混合模式 */
+	background-blend-mode: <blend-mode>;
+	[fix]/* 定义元素是否创建新的混合环境 */
+	isolation: auto | isolate;
 
-	  [fix]/* 设置元素投影 */
-	  box-shadow: inset | <offset-x> <offset-y> | <blur-radius> | <spread-radius> | <color>;
+	[fix]/* 设置元素投影 */
+	box-shadow: inset | <offset-x> <offset-y> | <blur-radius> | <spread-radius> | <color>;
 
-	  /*指定了一个元素的透明度*/
-	  opacity: <number>;
-	  [fix]/* 滤镜属性 */
-	  filter: <url> | <filter-function>;
+	/*指定了一个元素的透明度*/
+	opacity: <number>;
+	[fix]/* 滤镜属性 */
+	filter: <url> | <filter-function>;
 
 
   [fix]/* 设置列属性 */
@@ -331,7 +335,7 @@ div {
 	    font-size: <length> | <percentage> | larger | smaller | xx-small | x-small | small | medium | large | x-large | xx-large;
 	    [fix]/* 声明渲染字体 */
 	    font-family: <family-name> | <generic-name>;
-	    /*指定 line-box 的高度*/
+	    [fix]/* 设置行高 */
 	    line-height: normal | <number> | <length> | <percentage>;
 
 	  [fix]/* 设置元素前景色 */
@@ -351,7 +355,7 @@ div {
 		font-synthesis: none | weight | style;
 		[fix]/* 定义字体的aspect值（字体的小写字母x的高度与font-size高度之间的比率被称为一个字体的 aspect 值） */
 		font-size-adjust: none | <number>;
-	  /*定义字间距*/
+	  [fix]/* 定义字间距 */
 	  letter-spacing: normal | <length>;
 
 	  [fix]/* 控制西文字符间隙距离 */
@@ -364,6 +368,8 @@ div {
 	  overflow-wrap ( word-wrap ): normal | break-word;
 	  /*指定怎样在单词内断行*/
 	  word-break: normal | break-all | keep-all;
+		[fix]/* 声明文本断行规则 */
+		line-break: auto | loose | normal | strict;
 	  [fix]/* 西文文本换行时如何处理连字符 */
 	  hyphens: none | manual | auto;
 
@@ -411,8 +417,33 @@ div {
   /*设置元素的缩放*/
   *zoom: auto | <number> | <percentage>;
 
-  [fix]/* 对元素进行裁剪（遮罩层）*/
+  [fix]/* 对元素进行裁剪 */
   clip-path: url | none | <basic-shape> | <geometry-box>;
+	[fix]/* 对元素使用遮罩 */
+	[-] mask: ;
+		[fix]/* 遮罩层图像 */
+		mask-image: none | <url>;
+		[fix]/* 遮罩层模式 */
+		mask-mode: alpha | luminance | match-source;
+		[fix]/* 遮罩层位置 */
+		mask-position: <position>;
+		[fix]/* 遮罩层大小 */
+		mask-size: <length> | <percentage> | auto | cover | contain;
+		[fix]/* 遮罩层如何重复性 */
+		mask-repeat: repeat-x | repeat-y | repeat | space | round | no-repeat;
+		[fix]/* 遮罩层的定位区域 */
+		mask-origin: border-box | padding-box | content-box | margin-box | fill-box | stroke-box | view-box;
+		[fix]/* 遮罩层的影响范围 */
+		mask-clip: border-box | padding-box | content-box | margin-box | fill-box | stroke-box | view-box | no-clip;
+		[fix]/* 选择遮罩层的叠加方式 */
+		mask-composite: add | subtract | intersect | exclude;
+	[fix]/* <mask>标签中遮罩以亮度或是透明度呈现 */
+	mask-type: luminance | alpha;
+
+
+
+	
+
 
 	/*是否可由用户调整元素的尺寸*/
 	resize: none | both | horizontal | vertical | block | inline;
