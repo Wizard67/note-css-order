@@ -1,10 +1,17 @@
 ```css
-
-<length>: .em | .ex | .ch | .rem | .vh | .vw | .wmin | .vmax | .px | .mm | .cm | .in | .pt | .pc | [.mozmm];
+/* 表示距离尺寸 */
+<length>: .em | .ex | .ch | .rem | .lh | .rlh | .vh | .vw | .vi | .vb | .wmin | .vmax | .px | .mm | .cm | .in | .pt | .pc | .mozmm;
+/* 表示一个百分百值 */
 <percentages>: .%;
-<image>: url();
+/* 指向一个资源 */
+<url>: url();
+/* 表示数字 */
+<number>: 0 | 0.0 | -0 | +0;
+/* 表示颜色 */
 <color>: <hex-color> | <named-color> | transparent | currentcolor | <rgb()> | <hsl()> | <rgba()> | <hsla()> | <deprecated-system-color>;
+/* 表示形状 */
 <shape>: rect(<top>, <right>, <bottom>, <left>);
+/* 表示时间 */
 <time>: .ms | .s;
 
 
@@ -172,7 +179,7 @@ div {
 	    /* 声明边框图片样式，会覆盖 border-style */
 	    [-] border-image: ;
 	      /* 图片资源路径 */ 
-	      border-image-source: none | <image>;
+	      border-image-source: none | <url>;
 	      /* 图像边框的向内偏移 */
 	      border-image-slice: <number> | <percentage> | fill;
 	      /* 边框宽度，会覆盖 border-width 属性 */
@@ -229,7 +236,7 @@ div {
 	[fix]/* 声明背景属性 */
 	[-] background: ...;
 	  /* 为元素设置一个或多个背景图像 */
-	  background-image: none | <image>;
+	  background-image: none | <url>;
 	  /* 背景图片的初始位置 */
 	  background-position: left | center | right | top | bottom | <percentage> | <length>;
 	  /* 设置背景图片大小 */
