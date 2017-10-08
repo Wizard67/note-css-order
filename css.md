@@ -51,58 +51,52 @@ div {
 	order: <integer>;
 
 
-	[fix]/* 声明网格布局属性 */
+	[fix]/* 声明网格容器属性 */
 	[-] grid: ...;
-		[fix]/**/
-		grid-template-rows: ;
-		[fix]/**/
-		grid-template-columns: ;
-		[fix]/**/
-		grid-template-areas: ;
-		[fix]/**/
-		grid-auto-rows: ;
-		[fix]/**/
-		grid-auto-columns:  ;
-		[fix]/**/
-		grid-auto-flow:  ;
-		[fix]/**/
-		grid-column-gap:  ;
-		[fix]/**/
-		grid-row-gap: ;
+		[fix]/* 声明横向网格线名称和网格高度 */
+		grid-template-rows: none | auto | [linename] | <length> | <percentage> | <flex> | max-content | min-content | minmax() | fit-content() | repeat();
+		[fix]/* 声明纵向网格线名称和网格宽度 */
+		grid-template-columns: none | auto | [linename] | <length> | <percentage> | <flex> | max-content | min-content | minmax() | fit-content() | repeat();
+		[fix]/* 声明网格区域名称 */
+		grid-template-areas: none | <string> | .;
+		[fix]/* 声明隐式网格行*/
+		grid-auto-rows: auto | <length> | <percentage> | <flex> | max-content | min-content | minmax();
+		[fix]/* 声明隐式网格列*/
+		grid-auto-columns:  auto | <length> | <percentage> | <flex> | max-content | min-content | minmax() | fit-content();
+		[fix]/* 定义网格流方向 */
+		grid-auto-flow: row | column | dense;
+		[fix]/* 设置网格列之间的间距 */
+		grid-column-gap: <length> | <percentage>;
+		[fix]/* 设置网格行之间的间距 */
+		grid-row-gap: <length> | <percentage>;
 
-	[fix]/* */
-	[-] grid-area: ...;
-		[fix]/**/
-		grid-row-start: ;
-		[fix]/**/
-		grid-column-start: ;
-		[fix]/**/
-		grid-row-end: ;	
-		[fix]/**/
-		grid-column-end: ;
+	[fix]/* 声明网格项目位置的合并 */
+	[-] grid-area: <custom-ident> | ...;
+		[fix]/* 声明网格项目行合并的初始位置 */
+		grid-row-start: auto | span | <integer> | <custom-ident>;
+		[fix]/* 声明网格项目行合并的结束位置 */
+		grid-row-end: auto | span | <integer> | <custom-ident>;
+		[fix]/* 声明网格项目行合并的初始位置 */
+		grid-column-start: auto | span | <integer> | <custom-ident>;
+		[fix]/* 声明网格项目列合并的结束位置 */
+		grid-column-end: auto | span | <integer> | <custom-ident>;
 
-	[fix]/* */
+	[fix]/* 声明网格项目行的合并 */
 	[-] grid-column: ...;
-		[fix]/**/
 		grid-column-start: ;
-		[fix]/**/
 		grid-column-end: ;
 
-	[fix]/* */
+	[fix]/* 声明网格行列间距 */
 	[-] grid-gap: ...;
-		[fix]/**/
 		grid-row-gap: ;
-		[fix]/**/
 		grid-column-gap: ;
 
-	[fix]/* */
+	[fix]/* 声明网格项目列的合并 */
 	[-] grid-row: ...;
-		[fix]/**/
 		grid-row-start: ;
-		[fix]/**/
 		grid-row-end: ;
 
-	[fix]/* */
+	[fix]/* 声明网格容器属性 */
 	[-] grid-template: ...;
 		[fix]/**/
 		grid-template-rows: ;
@@ -385,7 +379,7 @@ div {
 			text-emphasis-style: none | open | dot | circle | double-circle | triangle | sesame | <string>;
 			[fix]/* 标记符号的颜色 */
 	    text-emphasis-color: <color>;
-		[fix]/* 文本重点标记的渲染位置 */
+		  [fix]/* 文本重点标记的渲染位置 */
 	    text-emphasis-position: over | under | right | left;
 	    
 	  [fix]/* 文本修饰线 */
@@ -489,9 +483,6 @@ div {
 
   [fix] /* 重置除了 unicode-bidi 和 direction 之外的所有属性至初始值或继承值 */
   all: initial | inherit | unset;
-
-  /*设置元素表现样式*/
-  -appearance：auto | none;
 
   [fix]/* 子元素空间状态（2d/3d）*/
   transform-style: flat | preserve-3d;
