@@ -16,147 +16,144 @@
 
 
 div {
-  [fix]/* 设置元素的定位方式 */
+  /* 设置元素的定位方式 */
   position: static | relative | absolute | fixed | sticky;
-  [fix]/* 使定位后的元素产生位置偏移 */
+  /* 使定位后的元素产生位置偏移 */
   top: <length> | <percentages> | auto;
   right: <length> | <percentages> | auto;
   bottom: <length> | <percentages> | auto;
   left: <length> | <percentages> | auto;
 
-	[fix]/* 元素浮动 */
+	/* 元素浮动 */
 	float: left | right | none | inline-start | inline-end;
-	[fix]/* 是否清除浮动 */
+	/* 是否清除浮动 */
 	clear: none | left | right | both | inline-start | inline-end;
 
-  [fix]/* 描述元素的盒子类型 */
+  /* 描述元素的盒子类型 */
   display: none | inline | block | list-item | inline-list-item | inline-block | inline-table | table | table-cell | table-column | table-column-group | table-footer-group | table-header-group | table-row | table-row-group | flex | inline-flex | grid | inline-grid | run-in | ruby | ruby-base | ruby-text | ruby-base-container | ruby-text-container | contents;
 
-	[fix]/* 声明项目的空间分配 */
+	/* 声明项目的空间分配 */
 	[-] flex: auto | initial | none | ...;
-	  [fix]/* 定义项目的拉伸因子 */
+	  /* 定义项目的拉伸因子 */
 	  flex-grow: <number>;
-	  [fix]/* 定义项目的收缩规则 */
+	  /* 定义项目的收缩规则 */
 	  flex-shrink: <number>;
-	  [fix]/* 指定项目在主轴方向的初始大小 */
+	  /* 指定项目在主轴方向的初始大小 */
 	  flex-basis: <length> | <percentages> | content;
-	[fix]/* 声明容器的主轴方向和换行规则 */
+	/* 声明容器的主轴方向和换行规则 */
 	[-] flex-flow: ...;
-		[fix]/* 定义主轴的方向 */
+		/* 定义主轴的方向 */
 		flex-direction: row | row-reverse | column | column-reverse;
-		[fix]/* 声明是否允许换行 */
+		/* 声明是否允许换行 */
 		flex-wrap: nowrap | wrap | wrap-reverse;
-	[fix]/* 声明项目在主轴上的位置和空间分配 */
+	/* 声明项目在主轴上的位置和空间分配 */
 	justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
-	[fix]/* 声明如何分配多行弹性容器中侧轴的空间位置 */
+	/* 声明如何分配多行弹性容器中侧轴的空间位置 */
 	align-content: flex-start | flex-end | center | space-between | space-around | stretch;
-	[fix]/* 声明项目在侧轴上的位置和空间分配 */
+	/* 声明项目在侧轴上的位置和空间分配 */
 	align-items: flex-start | flex-end | center | baseline | stretch;
-	[fix]/* 单独声明项目在弹性容器侧轴上的对齐方式 */
+	/* 单独声明项目在弹性容器侧轴上的对齐方式 */
 	align-self: auto | flex-start | flex-end | center | baseline | stretch;
-	[fix]/* 项目在弹性容器中的排序权重 */
+	/* 项目在弹性容器中的排序权重 */
 	order: <integer>;
 
 
-	[fix]/* 声明网格容器属性 */
+	/* 声明网格容器属性 */
 	[-] grid: ...;
-		[fix]/* 声明横向网格线名称和网格高度 */
+		/* 声明横向网格线名称和网格高度 */
 		grid-template-rows: none | auto | [linename] | <length> | <percentage> | <flex> | max-content | min-content | minmax() | fit-content() | repeat();
-		[fix]/* 声明纵向网格线名称和网格宽度 */
+		/* 声明纵向网格线名称和网格宽度 */
 		grid-template-columns: none | auto | [linename] | <length> | <percentage> | <flex> | max-content | min-content | minmax() | fit-content() | repeat();
-		[fix]/* 声明网格区域名称 */
+		/* 声明网格区域名称 */
 		grid-template-areas: none | <string> | .;
-		[fix]/* 声明隐式网格行*/
+		/* 声明隐式网格行*/
 		grid-auto-rows: auto | <length> | <percentage> | <flex> | max-content | min-content | minmax();
-		[fix]/* 声明隐式网格列*/
+		/* 声明隐式网格列*/
 		grid-auto-columns:  auto | <length> | <percentage> | <flex> | max-content | min-content | minmax() | fit-content();
-		[fix]/* 定义网格流方向 */
+		/* 定义网格流方向 */
 		grid-auto-flow: row | column | dense;
-		[fix]/* 设置网格列之间的间距 */
+		/* 设置网格列之间的间距 */
 		grid-column-gap: <length> | <percentage>;
-		[fix]/* 设置网格行之间的间距 */
+		/* 设置网格行之间的间距 */
 		grid-row-gap: <length> | <percentage>;
 
-	[fix]/* 声明网格项目位置的合并 */
+	/* 声明网格项目位置的合并 */
 	[-] grid-area: <custom-ident> | ...;
-		[fix]/* 声明网格项目行合并的初始位置 */
+		/* 声明网格项目行合并的初始位置 */
 		grid-row-start: auto | span | <integer> | <custom-ident>;
-		[fix]/* 声明网格项目行合并的结束位置 */
+		/* 声明网格项目行合并的结束位置 */
 		grid-row-end: auto | span | <integer> | <custom-ident>;
-		[fix]/* 声明网格项目行合并的初始位置 */
+		/* 声明网格项目行合并的初始位置 */
 		grid-column-start: auto | span | <integer> | <custom-ident>;
-		[fix]/* 声明网格项目列合并的结束位置 */
+		/* 声明网格项目列合并的结束位置 */
 		grid-column-end: auto | span | <integer> | <custom-ident>;
 
-	[fix]/* 声明网格项目行的合并 */
+	/* 声明网格项目行的合并 */
 	[-] grid-column: ...;
 		grid-column-start: ;
 		grid-column-end: ;
 
-	[fix]/* 声明网格行列间距 */
+	/* 声明网格行列间距 */
 	[-] grid-gap: ...;
 		grid-row-gap: ;
 		grid-column-gap: ;
 
-	[fix]/* 声明网格项目列的合并 */
+	/* 声明网格项目列的合并 */
 	[-] grid-row: ...;
 		grid-row-start: ;
 		grid-row-end: ;
 
-	[fix]/* 声明网格容器属性 */
+	/* 声明网格容器属性 */
 	[-] grid-template: ...;
-		[fix]/**/
 		grid-template-rows: ;
-		[fix]/**/
 		grid-template-columns: ;
-		[fix]/**/
 		grid-template-areas: ;
 	
-	[fix]/* 定义了表格布局算法 */
+	/* 定义了表格布局算法 */
 	table-layout: auto | fixed;
-	[fix]/* 表格空单元格的样式显示处理 */
+	/* 表格空单元格的样式显示处理 */
 	empty-cells: show | hide;
-	[fix]/* 规定表格标题放置位置 */
+	/* 规定表格标题放置位置 */
 	caption-side: top | bottom | block-start | block-end | inline-start | inline-end;
-	[fix]/* 声明表格的边框是分隔还是合并 */
+	/* 声明表格的边框是分隔还是合并 */
 	border-collapse: collapse | separate;
-	[fix]/* 设置相邻单元格边框之间的边距 */
+	/* 设置相邻单元格边框之间的边距 */
 	border-spacing: <length> ;
 
-	[fix]/* 设置列表符号 */
+	/* 设置列表符号 */
  	[-] list-style: ...;
-	  [fix]/* 列表符号风格 */
+	  /* 列表符号风格 */
 	  list-style-type: none | <counter-style> | <string>;
-	  [fix]/* 列表符号定位 */
+	  /* 列表符号定位 */
 	  list-style-position: inside | outside;
-	  [fix]/* 指定图片作为列表符号 */
+	  /* 指定图片作为列表符号 */
 	  list-style-image: none | <url>;
 
 
-  [fix]/* 改变默认的CSS盒模型对元素宽高的计算方式 */
+  /* 改变默认的CSS盒模型对元素宽高的计算方式 */
   box-sizing: content-box | border-box;
-	[fix]/* 指定了元素内容区的宽度。*/
+	/* 指定了元素内容区的宽度。*/
 	width: <length> | <percentage> | auto | max-content | min-content | fill-available | fit-content;
-	[fix] /* 为元素设置最小宽度 */
+	 /* 为元素设置最小宽度 */
 	min-width: <length> | <percentage> | max-content | min-content | fill-available | fit-content;
-	[fix]/* 为元素内容区设置最大宽度值 */
+	/* 为元素内容区设置最大宽度值 */
 	max-width: none | <length> | <percentage> | max-content | min-content | fill-available | fit-content;
 
-	[fix]/* 指定了元素内容区的高度 */
+	/* 指定了元素内容区的高度 */
 	height: <length> | <percentage> | auto;
-	[fix]/* 为元素设置最小高度 */
+	/* 为元素设置最小高度 */
 	min-height: <length> | <percentage> | max-content | min-content | fill-available | fit-content;
-	[fix]/* 为元素内容区设置最大高度值 */
+	/* 为元素内容区设置最大高度值 */
 	max-height: none | <length> | <percentage> | max-content | min-content | fill-available | fit-content;
 
-	[fix]/* 为元素声明内边距 */
+	/* 为元素声明内边距 */
 	[-] padding: <length> | <percentage>;
 	  padding-top: ;
 	  padding-right: ;
 	  padding-bottom: ;
 	  padding-left: ;
 
-	[fix]/* 声明边框属性 */
+	/* 声明边框属性 */
 	[-] border: ...;
 	    /* 声明边框宽度 */
 	    [-] border-width: <length> | thin | medium | thick;
@@ -215,25 +212,25 @@ div {
 	    border-bottom-left-radius: ;
 	    border-top-left-radius: ;
 
-	[fix]/* 为元素设置轮廓线 */
+	/* 为元素设置轮廓线 */
 	[-] outline: ...;
-	  [fix]/* 设置轮廓线宽度 */
+	  /* 设置轮廓线宽度 */
 	  outline-width: <length> | thin | medium | thick;
-	  [fix]/* 为轮廓线设置颜色 */
+	  /* 为轮廓线设置颜色 */
 	  outline-color: <color> | inver;
-	  [fix]/* 轮廓线风格 */
+	  /* 轮廓线风格 */
 	  outline-style: auto | none | dotted | dashed | solid | double | groove | ridge | inset | outset;
-	[fix]/* 对轮廓进行偏移 */
+	/* 对轮廓进行偏移 */
 	outline-offset: <length>;
 
-	[fix]/* 为元素声明外边距 */
+	/* 为元素声明外边距 */
 	[-] margin: <length> | <percentage> | auto;
 	  margin-top: ;
 	  margin-right: ;
 	  margin-bottom: ;
 	  margin-left: ;
 
-	[fix]/* 声明背景属性 */
+	/* 声明背景属性 */
 	[-] background: ...;
 	  /* 为元素设置一个或多个背景图像 */
 	  background-image: none | <url>;
@@ -252,29 +249,29 @@ div {
 	  /* 背景色 */
 	  background-color: <color> | transparent;
 
-	[fix]/* 背景图片以及背景色的混合模式 */
+	/* 背景图片以及背景色的混合模式 */
 	background-blend-mode: <blend-mode>;
-	[fix]/* 定义元素是否创建新的混合环境 */
+	/* 定义元素是否创建新的混合环境 */
 	isolation: auto | isolate;
 
-	[fix]/* 设置元素投影 */
+	/* 设置元素投影 */
 	box-shadow: inset | <offset-x> <offset-y> | <blur-radius> | <spread-radius> | <color>;
 
-	[fix] /* 设置透明度 */
+	 /* 设置透明度 */
 	opacity: <number>;
-	[fix]/* 滤镜属性 */
+	/* 滤镜属性 */
 	filter: <url> | <filter-function>;
 
 
-  [fix]/* 设置列属性 */
+  /* 设置列属性 */
   [-] columns: ...;
     /* 设置列的宽度 */
     column-width: <length> | auto;
     /* 设置被划分的列数 */
     column-count: <number> | auto;
-  [fix]/* 声明列之间的间隔 */
+  /* 声明列之间的间隔 */
   column-gap: <length> | normal;
-  [fix]/* 声明列的样式 */
+  /* 声明列的样式 */
   [-] column-rule: ...;
     /* 列之间的宽度 */
     column-rule-width: <length> | thin | medium | thick;
@@ -282,280 +279,280 @@ div {
     column-rule-style: none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset;
     /* 列之间的颜色 */
     column-rule-color: <color>;
-  [fix]/* 规定元素横跨列数 */
+  /* 规定元素横跨列数 */
   column-span: none | all;
-  [fix]/* 指定留在容器底部元素最小行的数量 */
+  /* 指定留在容器底部元素最小行的数量 */
   orphans: <integer>;
-	[fix]/* 声明内容如何分割成列 */
+	/* 声明内容如何分割成列 */
 	column-fill: auto | balance;
 
 
-  [fix]/* 规定了内容溢出容器时的处理 */
+  /* 规定了内容溢出容器时的处理 */
   overflow: ...;
-    [fix]/* 水平溢出的处理 */
+    /* 水平溢出的处理 */
     overflow-x: visible | hidden | scroll | auto;
-    [fix]/* 垂直溢出的处理 */
+    /* 垂直溢出的处理 */
     overflow-y: visible | hidden | scroll | auto;
 
 
-  [fix]/* 指定行内元素或表格单元格元素的垂直对齐方式 */
+  /* 指定行内元素或表格单元格元素的垂直对齐方式 */
   vertical-align: baseline | sub | super | text-top | text-bottom | middle | top | bottom | <percentage> | <length>;
 
-  [fix]/* 定义如何渲染字体 */
+  /* 定义如何渲染字体 */
   text-rendering: auto | optimizeSpeed | optimizeLegibility | geometricPrecision;
 
-	  [fix]/* 规定文本的排版模式 */
+	  /* 规定文本的排版模式 */
 	  writing-mode: horizontal-tb | vertical-rl | vertical-lr | sideways-rl | sideways-lr;
-	  [fix]/* 纵横混排 */
+	  /* 纵横混排 */
 	  text-combine-upright: none | all | <integer>;
-	  [fix]/* 控制字符方向 */
+	  /* 控制字符方向 */
 	  text-orientation: mixed | upright | sideways;
-	  [fix]/* 规定文本书写方向 */
+	  /* 规定文本书写方向 */
 	  direction: ltr | rtl;
-	  [fix]/* 双向排列 */
+	  /* 双向排列 */
 	  unicode-bidi: normal | embed | bidi-override | isolate | isolate-override | plaintext;
 
-	  [fix]/* 文本效果样式 */
+	  /* 文本效果样式 */
 	  [-] font: caption | icon | menu | message-box | small-caption | status-bar | ...;
-	    [fix]/* 选择字体风格 */
+	    /* 选择字体风格 */
 	    font-style: normal | italic | oblique;
-	    [fix]/* 西文字体小写转换大写 */
+	    /* 西文字体小写转换大写 */
 	    font-variant: normal | none | small-caps...;
-	    [fix]/* 指定字重 */
+	    /* 指定字重 */
 	    font-weight: normal | bold｜lighter | bolder | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
-	    [fix]/* 对字体进行变形 */
+	    /* 对字体进行变形 */
 	    font-stretch: normal | ultra-condensed | extra-condensed | condensed | semi-condensed | semi-expanded | expanded | extra-expanded | ultra-expanded;
-	    [fix]/* 字体大小 */
+	    /* 字体大小 */
 	    font-size: <length> | <percentage> | larger | smaller | xx-small | x-small | small | medium | large | x-large | xx-large;
-	    [fix]/* 声明渲染字体 */
+	    /* 声明渲染字体 */
 	    font-family: <family-name> | <generic-name>;
-	    [fix]/* 设置行高 */
+	    /* 设置行高 */
 	    line-height: normal | <number> | <length> | <percentage>;
 
-	  [fix]/* 设置元素前景色 */
+	  /* 设置元素前景色 */
 	  color: <color>;
 
-	  [fix]/* 设置OpenType字体样式集，https://blogs.msdn.microsoft.com/ie_cn/2012/01/17/css-4 */
+	  /* 设置OpenType字体样式集，https://blogs.msdn.microsoft.com/ie_cn/2012/01/17/css-4 */
 	  font-feature-settings: normal | <feature-tag-value>;
-		[fix]/* 声明OpenType文本的语言渲染处理 */
+		/* 声明OpenType文本的语言渲染处理 */
 		font-language-override: normal | <string>;
 
-	  [fix]/* 处理元素中的空白符 */
+	  /* 处理元素中的空白符 */
 	  white-space: normal | pre | nowrap | pre-wrap | pre-line;
-	  [fix]/* 文本溢出处理 white-space:nowrap; overflow: hidden;*/
+	  /* 文本溢出处理 white-space:nowrap; overflow: hidden;*/
 	  text-overflow: clip | ellipsis | <string>;
 
-		[fix]/* 字体合成 */
+		/* 字体合成 */
 		font-synthesis: none | weight | style;
-		[fix]/* 定义字体的aspect值（字体的小写字母x的高度与font-size高度之间的比率被称为一个字体的 aspect 值） */
+		/* 定义字体的aspect值（字体的小写字母x的高度与font-size高度之间的比率被称为一个字体的 aspect 值） */
 		font-size-adjust: none | <number>;
-	  [fix]/* 定义字间距 */
+	  /* 定义字间距 */
 	  letter-spacing: normal | <length>;
 
-	  [fix]/* 控制西文字符间隙距离 */
+	  /* 控制西文字符间隙距离 */
 	  font-kerning: auto | normal | none;
-	  [fix]/* 声明标签和单词的间距 */
+	  /* 声明标签和单词的间距 */
 	  word-spacing: normal | <length> | <percentage>;
-	  [fix]/* 控制文本大小写 */
+	  /* 控制文本大小写 */
 	  text-transform: none | capitalize | uppercase | lowercase | full-width;
-	  [fix]/* 是否允许单词中断换行 */
+	  /* 是否允许单词中断换行 */
 	  overflow-wrap(word-wrap): normal | break-word;
-	  [fix]/* 声明单词断行规则 */
+	  /* 声明单词断行规则 */
 	  word-break: normal | break-all | keep-all;
-		[fix]/* 声明文本断行规则 */
+		/* 声明文本断行规则 */
 		line-break: auto | loose | normal | strict;
-	  [fix]/* 西文文本换行时如何处理连字符 */
+	  /* 西文文本换行时如何处理连字符 */
 	  hyphens: none | manual | auto;
 
-	  [fix]/* 定义元素内的内容如何对齐  */
+	  /* 定义元素内的内容如何对齐  */
 	  text-align: start | end | left | right | center | justify | match-parent;
-	  [fix]/* 规定如何对齐末行元素 */
+	  /* 规定如何对齐末行元素 */
 	  text-align-last: auto | start | end | left | right | center | justify;
-		[fix]/* 文本两侧对齐时的空白填充方式 */
+		/* 文本两侧对齐时的空白填充方式 */
 		text-justify: auto | inter-character | inter-word | none;
 
-	  [fix]/* 为元素内容添加引用符号 */
+	  /* 为元素内容添加引用符号 */
 	  quotes: none | <string>;
-	  [fix]/* 制表符（U+0009）宽度 */
+	  /* 制表符（U+0009）宽度 */
 	  tab-size: <integer> | <length>;
-	  [fix]/* 文本首行缩进 */
+	  /* 文本首行缩进 */
 	  text-indent: <length> | <percentage> | hanging | each-line;
-	  [fix]/* 文本重点标记 */
+	  /* 文本重点标记 */
 	  [-] text-emphasis: ...;
-			[]fix/* 标记符号的类型 */
+			/* 标记符号的类型 */
 			text-emphasis-style: none | open | dot | circle | double-circle | triangle | sesame | <string>;
-			[fix]/* 标记符号的颜色 */
+			/* 标记符号的颜色 */
 	    text-emphasis-color: <color>;
-		  [fix]/* 文本重点标记的渲染位置 */
+		  /* 文本重点标记的渲染位置 */
 	    text-emphasis-position: over | under | right | left;
 	    
-	  [fix]/* 文本修饰线 */
+	  /* 文本修饰线 */
 	  [-] text-decoration: ...;
-			[fix]/* 文本修饰线的颜色 */
+			/* 文本修饰线的颜色 */
 	    text-decoration-color: <color>;
-			[fix]/* 文本修饰线的类型 */
+			/* 文本修饰线的类型 */
 	    text-decoration-style: solid | double | dotted | dashed | wavy;
-			[fix]/* 文本修饰线的渲染位置 */
+			/* 文本修饰线的渲染位置 */
 	    text-decoration-line: none | underline | overline | line-through | blink;
-	  [fix]/* 文本下划线位置 */
+	  /* 文本下划线位置 */
 	  text-underline-position: auto | under | left | right | under left | right under;
 
-	  [fix]/* 文本阴影 */
+	  /* 文本阴影 */
 	  text-shadow: none | <color> | <offset-x> <offset-y> | <blur-radius>;
 
 
-	[fix]/* 设定alpha值提取图像形状 */
+	/* 设定alpha值提取图像形状 */
 	shape-image-threshold: <number>;
-	[fix]/* 为形状（shape）添加轮廓 */
+	/* 为形状（shape）添加轮廓 */
 	shape-outside: none | <shape-box> | <basic-shape> | <url>;
-	[fix]/* 为形状（shape）添加外边距 */
+	/* 为形状（shape）添加外边距 */
 	shape-margin: <length> | <percentage>;
 
 
-  [fix]/* 定义图片缩放算法 */
+  /* 定义图片缩放算法 */
   image-rendering: auto | crisp-edges | pixelated;
-  [fix]/* 修正图片的预设方向 */
+  /* 修正图片的预设方向 */
   image-orientation: from-image | <angle> | flip;
-	[fix]/* 设定图片分辨率 */
+	/* 设定图片分辨率 */
 	image-resolution: <resolution>;
 
-  [fix]/* 替换元素的内容如何适应容器 */
+  /* 替换元素的内容如何适应容器 */
   object-fit: fill | contain | cover | none | scale-down;
-  [fix]/* 确定替换元素的位置 */
+  /* 确定替换元素的位置 */
   object-position: left | center | right | top | bottom | <length> | <percentage>;
 
-  [fix]/* 声明元素重叠时显示的权重 */
+  /* 声明元素重叠时显示的权重 */
   z-index: <integer> | auto;
 
-	[fix]/* 自定义属性 */
+	/* 自定义属性 */
 	--*: ...;
 
-  [fix]/* 对元素进行裁剪 */
+  /* 对元素进行裁剪 */
   clip-path: url | none | <basic-shape> | <geometry-box>;
-	[fix]/* 对元素使用遮罩 */
+	/* 对元素使用遮罩 */
 	[-] mask: ...;
-		[fix]/* 遮罩层图像 */
+		/* 遮罩层图像 */
 		mask-image: none | <url>;
-		[fix]/* 遮罩层模式 */
+		/* 遮罩层模式 */
 		mask-mode: alpha | luminance | match-source;
-		[fix]/* 遮罩层位置 */
+		/* 遮罩层位置 */
 		mask-position: <position>;
-		[fix]/* 遮罩层大小 */
+		/* 遮罩层大小 */
 		mask-size: <length> | <percentage> | auto | cover | contain;
-		[fix]/* 遮罩层如何重复性 */
+		/* 遮罩层如何重复性 */
 		mask-repeat: repeat-x | repeat-y | repeat | space | round | no-repeat;
-		[fix]/* 遮罩层的定位区域 */
+		/* 遮罩层的定位区域 */
 		mask-origin: border-box | padding-box | content-box | margin-box | fill-box | stroke-box | view-box;
-		[fix]/* 遮罩层的影响范围 */
+		/* 遮罩层的影响范围 */
 		mask-clip: border-box | padding-box | content-box | margin-box | fill-box | stroke-box | view-box | no-clip;
-		[fix]/* 选择遮罩层的叠加方式 */
+		/* 选择遮罩层的叠加方式 */
 		mask-composite: add | subtract | intersect | exclude;
-	[fix]/* <mask>标签中遮罩以亮度或是透明度呈现 */
+	/* <mask>标签中遮罩以亮度或是透明度呈现 */
 	mask-type: luminance | alpha;
 
-	[fix]/* 注释的对齐方式 */
+	/* 注释的对齐方式 */
 	ruby-align: start | center | space-between | space-around;
-	[fix]/* 在一个ruby容器内如何处理多个注释 */
+	/* 在一个ruby容器内如何处理多个注释 */
 	ruby-merge: auto | collapse | separate;
-	[fix]/* 注释的放置位置 */
+	/* 注释的放置位置 */
 	ruby-position: over | under | inter-character;
 	
 
 
-	[fix]/* 是否可由用户调整元素的尺寸 */
+	/* 是否可由用户调整元素的尺寸 */
 	resize: none | both | horizontal | vertical;
-  [fix]/* 声明鼠标悬浮样式 */
+  /* 声明鼠标悬浮样式 */
   cursor:  <url> | auto | default | none | context-menu | help | pointer | progress | wait | cell | crosshair | text | vertical-text | alias | copy | move | no-drop | not-allowed | e-resize | n-resize | ne-resize | nw-resize | s-resize | se-resize | sw-resize | w-resize | ew-resize | ns-resize | nesw-resize | nwse-resize | col-resize | row-resize | all-scroll | -zoom-in | -zoom-out | grab | grabbing;
 
-	[fix]/* 声明插入光标的颜色 */
+	/* 声明插入光标的颜色 */
 	caret-color: auto | <color>;
-	[fix]/* 是否允许激活输入法（IME）状态 */
+	/* 是否允许激活输入法（IME）状态 */
 	ime-mode: auto | normal | active | inactive | disabled;
-	[fix]/* 隐藏元素保留空间位置 */
+	/* 隐藏元素保留空间位置 */
   visibility: visible | hidden | collapse;
 
-	[fix]/* 规定用户手势操作方式 */
+	/* 规定用户手势操作方式 */
 	touch-action: auto | none | pan-x | pan-left | pan-right | pan-y | pan-up | pan-down | pinch-zoom | manipulation;
-  [fix]/* 为计数器设置初始值 */
+  /* 为计数器设置初始值 */
   counter-reset: <custom-ident> <integer> | none;
-  [fix]/* 为元素添加计数器 */
+  /* 为元素添加计数器 */
   counter-increment: <custom-ident> <integer> | none;
-  [fix]/* 在::before和::after中插入内容*/
+  /* 在::before和::after中插入内容*/
   content: none | normal | <string> | <uri> | <counter> | attr() | open-quote | close-quote | no-open-quote | no-close-quote;
 
-  [fix] /* 通知浏览器进行元素改变的优化 */
+   /* 通知浏览器进行元素改变的优化 */
   will-change: auto | scroll-position | contents | <custom-ident>;
-  [fix]/* 设置鼠标事件穿透 */
+  /* 设置鼠标事件穿透 */
   pointer-events: auto | none | visiblePainted | visibleFill | visibleStroke | visible | painted | fill | stroke | all | inherit;
 
-  [fix] /* 重置除了 unicode-bidi 和 direction 之外的所有属性至初始值或继承值 */
+   /* 重置除了 unicode-bidi 和 direction 之外的所有属性至初始值或继承值 */
   all: initial | inherit | unset;
 
-  [fix]/* 子元素空间状态（2d/3d）*/
+  /* 子元素空间状态（2d/3d）*/
   transform-style: flat | preserve-3d;
-  [fix]/* 元素变形 */
+  /* 元素变形 */
   transform: none | <transform-function>;
-  [fix]/* 元素变形范围 */
+  /* 元素变形范围 */
   transform-box: border-box | fill-box | view-box;
-  [fix]/* 元素变形的中心点*/
+  /* 元素变形的中心点*/
   transform-origin: <percentage> | <length> | left | center | right | top | bottom | center;
 
-  [fix]/* 设置透视的观测距离 */
+  /* 设置透视的观测距离 */
   perspective: none | <length>;
-  [fix]/* 设置透视的灭点位置 */
+  /* 设置透视的灭点位置 */
   perspective-origin: <x-position> | <y-position> | <percentage> | <length>;
 
-  [fix]/* 3d状态下，声明元素背面是否可见 */
+  /* 3d状态下，声明元素背面是否可见 */
   backface-visibility: visible | hidden;
 
-	[fix]/* 设置元素之前的分页符 */
+	/* 设置元素之前的分页符 */
 	page-break-before: auto | always | avoid | left | right;
-	[fix]/* 设置元素之后的分页符 */
+	/* 设置元素之后的分页符 */
 	page-break-after: auto | always | avoid | left | right;
-	[fix]/* 设置元素容器内的分页符 */
+	/* 设置元素容器内的分页符 */
 	page-break-inside: auto | avoid;
-	[fix]/* 页面打印时分页保留的最少行数 */
+	/* 页面打印时分页保留的最少行数 */
 	widows: <integer>;
 
-	[fix]/* 导航或者CSSOM api产生滚动的过渡效果 */
+	/* 导航或者CSSOM api产生滚动的过渡效果 */
 	scroll-behavior: auto | smooth;
-	[fix]/* 定义元素滚动的snap点类型 */
+	/* 定义元素滚动的snap点类型 */
 	scroll-snap-type: none | mandatory | proximity;
-	[fix]/* 定义元素滚动的snap点坐标位置*/
+	/* 定义元素滚动的snap点坐标位置*/
 	scroll-snap-destination: <position>;
-	[fix]/* 定义元素滚动的snap点坐标偏移位置 */
+	/* 定义元素滚动的snap点坐标偏移位置 */
 	scroll-snap-coordinate: none | <position>;
 
 
-  [fix]/* 定义元素过渡效果 */
+  /* 定义元素过渡效果 */
   [-] transition: none | ...;
-	  [fix]/* 指定需过渡的属性 */
+	  /* 指定需过渡的属性 */
     transition-property: none | all | <transition-ident>;
-    [fix]/* 过渡效果执行时间 */
+    /* 过渡效果执行时间 */
     transition-duration: <time>;
-    [fix]/* 定义过渡缓动函数 */
+    /* 定义过渡缓动函数 */
     transition-timing-function: <timing-function>;
-    [fix]/* 延迟过渡 */
+    /* 延迟过渡 */
     transition-delay: <time>;
 
 
-  [fix]/* 动画属性 */
+  /* 动画属性 */
   [-] animation: ...;
-    [fix]/* 指定应用声明过的动画标识 */
+    /* 指定应用声明过的动画标识 */
     animation-name: none | <animation-ident>;
-    [fix]/* 指定动画执行周期 */
+    /* 指定动画执行周期 */
     animation-duration: <time>;
-    [fix]/* 定义动画缓动函数 */
+    /* 定义动画缓动函数 */
     animation-timing-function: <timing-function>;
-    [fix]/* 定义延时 */
+    /* 定义延时 */
     animation-delay: <time>;
-    [fix]/* 定义动画循环次数 */
+    /* 定义动画循环次数 */
     animation-iteration-count: infinite | <number>;
-    [fix]/* 指示是否反向播放 */
+    /* 指示是否反向播放 */
     animation-direction: normal | reverse | alternate | alternate-reverse;
-    [fix]/* 指定动画执行前后的元素样式 */
+    /* 指定动画执行前后的元素样式 */
     animation-fill-mode: none | forwards | backwards | both;
-    [fix]/* 定义或查询一个动画的当前状态 */
+    /* 定义或查询一个动画的当前状态 */
     animation-play-state: running | paused;
 }
 
