@@ -444,34 +444,41 @@ div {
 
     /* 文本溢出处理 white-space:nowrap; overflow: hidden;*/
     text-overflow: clip | ellipsis | <string>;
+
     /* 处理元素中的空白符 */
-    white-space:   normal | pre | nowrap | pre-wrap | pre-line;
+    white-space: normal | pre | nowrap | pre-wrap | pre-line;
+
     /* 是否允许单词中断换行 */
-    overflow-wrap(word-wrap): normal | break-word;
+    overflow-wrap: normal | break-word;
+    word-wrap:     normal | break-word;
+
     /* 声明单词断行规则 */
     word-break: normal | break-all | keep-all;
     /* 声明文本断行规则 */
     line-break: auto | loose | normal | strict;
     /* 西文文本换行时如何处理连字符 */
-    hyphens: none | manual | auto;
+    hyphens:    none | manual | auto;
 
-    /* 定义元素内的内容如何对齐 */
-    text-align: start | end | left | right | center | justify | match-parent;
+    /* 元素内的内容如何对齐 */
+    text-align:      start | end | left | right | center | justify | match-parent;
     /* 规定如何对齐末行元素 */
     text-align-last: auto | start | end | left | right | center | justify;
     /* 文本两侧对齐时的空白填充方式 */
-    text-justify: auto | inter-character | inter-word | none;
+    text-justify:    auto | inter-character | inter-word | none;
 
     /* 字体合成 */
     font-synthesis: none | weight | style;
+
     /* 定义字体的aspect值（字体的小写字母x的高度与font-size高度之间的比率被称为一个字体的 aspect 值） */
     font-size-adjust: none | <number>;
+
     /* 定义字间距 */
     letter-spacing: normal | <length>;
     /* 控制西文字符间隙距离 */
-    font-kerning: auto | normal | none;
+    font-kerning:   auto | normal | none;
     /* 声明标签和单词的间距 */
-    word-spacing: normal | <length> | <percentage>;
+    word-spacing:   normal | <length> | <percentage>;
+
     /* 控制文本大小写 */
     text-transform: none | capitalize | uppercase | lowercase | full-width;
 
@@ -481,16 +488,19 @@ div {
 
     /* 为元素内容添加引用符号 */
     quotes: none | <string>;
+
     /* 制表符（U+0009）宽度 */
     tab-size: <integer> | <length>;
+
     /* 文本首行缩进 */
     text-indent: <length> | <percentage> | hanging | each-line;
+
     /* 文本重点标记 */
     [-] text-emphasis: ...;
         /* 标记符号的类型 */
-        text-emphasis-style: none | open | dot | circle | double-circle | triangle | sesame | <string>;
+        text-emphasis-style:    none | open | dot | circle | double-circle | triangle | sesame | <string>;
         /* 标记符号的颜色 */
-        text-emphasis-color: <color>;
+        text-emphasis-color:    <color>;
         /* 文本重点标记的渲染位置 */
         text-emphasis-position: over | under | right | left;
         
@@ -501,7 +511,7 @@ div {
         /* 文本修饰线的类型 */
         text-decoration-style: solid | double | dotted | dashed | wavy;
         /* 文本修饰线的渲染位置 */
-        text-decoration-line: none | underline | overline | line-through | blink;
+        text-decoration-line:  none | underline | overline | line-through | blink;
     /* 文本下划线位置 */
     text-underline-position: auto | under | left | right | under left | right under;
 
@@ -513,18 +523,18 @@ div {
     /* ------------------- */
 
     /* 定义图片缩放算法 */
-    image-rendering: auto | crisp-edges | pixelated;
+    image-rendering:   auto | crisp-edges | pixelated;
     /* 修正图片的预设方向 */
     image-orientation: from-image | <angle> | flip;
     /* 设定图片分辨率 */
-    image-resolution: <resolution>;
+    image-resolution:  <resolution>;
 
     /* 设定alpha值提取图像形状 */
     shape-image-threshold: <number>;
     /* 为形状添加轮廓 */
-    shape-outside: none | <shape-box> | <basic-shape> | <url>;
+    shape-outside:         none | <shape-box> | <basic-shape> | <url>;
     /* 为形状添加外边距 */
-    shape-margin: <length> | <percentage>;
+    shape-margin:          <length> | <percentage>;
 
 
     /* ------------------------------------------------ */
@@ -532,16 +542,16 @@ div {
     /* ------------------------------------------------ */
 
     /* 子元素空间状态（2d/3d）*/
-    transform-style: flat | preserve-3d;
+    transform-style:  flat | preserve-3d;
     /* 元素变形 */
-    transform: none | <transform-function>;
+    transform:        none | <transform-function>;
     /* 元素变形范围 */
-    transform-box: border-box | fill-box | view-box;
+    transform-box:    border-box | fill-box | view-box;
     /* 元素变形的中心点*/
     transform-origin: <percentage> | <length> | left | center | right | top | bottom | center;
 
     /* 设置透视的观测距离 */
-    perspective: none | <length>;
+    perspective:        none | <length>;
     /* 设置透视的灭点位置 */
     perspective-origin: <x-position> | <y-position> | <percentage> | <length>;
 
@@ -558,33 +568,33 @@ div {
 
     /* 定义元素过渡效果 */
     [-] transition: none | ...;
-      /* 指定需过渡的属性 */
-      transition-property: none | all | <transition-ident>;
-      /* 过渡效果执行时间 */
-      transition-duration: <time>;
-      /* 定义过渡缓动函数 */
-      transition-timing-function: <timing-function>;
-      /* 延迟过渡 */
-      transition-delay: <time>;
+        /* 指定需过渡的属性 */
+        transition-property:        none | all | <transition-ident>;
+        /* 过渡效果执行时间 */
+        transition-duration:        <time>;
+        /* 定义过渡缓动函数 */
+        transition-timing-function: <timing-function>;
+        /* 延迟过渡 */
+        transition-delay:           <time>;
 
     /* 动画属性 */
     [-] animation: ...;
-      /* 指定应用声明过的动画标识 */
-      animation-name: none | <animation-ident>;
-      /* 指定动画执行周期 */
-      animation-duration: <time>;
-      /* 定义动画缓动函数 */
-      animation-timing-function: <timing-function>;
-      /* 定义延时 */
-      animation-delay: <time>;
-      /* 定义动画循环次数 */
-      animation-iteration-count: infinite | <number>;
-      /* 指示是否反向播放 */
-      animation-direction: normal | reverse | alternate | alternate-reverse;
-      /* 指定动画执行前后的元素样式 */
-      animation-fill-mode: none | forwards | backwards | both;
-      /* 定义或查询一个动画的当前状态 */
-      animation-play-state: running | paused;
+        /* 指定应用声明过的动画标识 */
+        animation-name:            none | <animation-ident>;
+        /* 指定动画执行周期 */
+        animation-duration:        <time>;
+        /* 定义动画缓动函数 */
+        animation-timing-function: <timing-function>;
+        /* 定义延时 */
+        animation-delay:           <time>;
+        /* 定义动画循环次数 */
+        animation-iteration-count: infinite | <number>;
+        /* 指示是否反向播放 */
+        animation-direction:       normal | reverse | alternate | alternate-reverse;
+        /* 指定动画执行前后的元素样式 */
+        animation-fill-mode:       none | forwards | backwards | both;
+        /* 定义或查询一个动画的当前状态 */
+        animation-play-state:      running | paused;
 
     /* ---------------------------- */
     /* ---------- 滚动效果 --------- */
@@ -602,19 +612,6 @@ div {
     /* ------------------------------------------------ */
     /* -------------------- 其他属性 ------------------- */
     /* ------------------------------------------------ */
-
-    /* ---------------------------- */
-    /* ---------- 页面打印 --------- */
-    /* ---------------------------- */
-
-    /* 设置元素之前的分页符 */
-    page-break-before: auto | always | avoid | left | right;
-    /* 设置元素之后的分页符 */
-    page-break-after:  auto | always | avoid | left | right;
-    /* 设置元素容器内的分页符 */
-    page-break-inside: auto | avoid;
-    /* 页面打印时分页保留的最少行数 */
-    widows:            <integer>;
 
     /* ---------------------------- */
     /* ---------- 用户行为 --------- */
@@ -670,6 +667,19 @@ div {
 
     /* 自定义属性 */
     --*: ...;
+
+    /* ---------------------------- */
+    /* ---------- 页面打印 --------- */
+    /* ---------------------------- */
+
+    /* 设置元素之前的分页符 */
+    page-break-before: auto | always | avoid | left | right;
+    /* 设置元素之后的分页符 */
+    page-break-after:  auto | always | avoid | left | right;
+    /* 设置元素容器内的分页符 */
+    page-break-inside: auto | avoid;
+    /* 页面打印时分页保留的最少行数 */
+    widows:            <integer>;
 
 }
 
