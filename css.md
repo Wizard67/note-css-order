@@ -8,9 +8,6 @@
 <color>:       <hex-color> | <named-color> | transparent | currentcolor | rgb() | hsl() | rgba() | hsla() | <deprecated-system-color>;
 <time>:        .ms | .s;
 
-```   
-
-```css
 
 div {
 
@@ -313,22 +310,22 @@ div {
 
     /* 对元素使用遮罩 */
     [-] mask: ...;
-      /* 遮罩层图像 */
-      mask-image:     none | <url>;
-      /* 遮罩层模式 */
-      mask-mode:      alpha | luminance | match-source;
-      /* 遮罩层位置 */
-      mask-position:  <position>;
-      /* 遮罩层大小 */
-      mask-size:      <length> | <percentage> | auto | cover | contain;
-      /* 遮罩层如何重复性 */
-      mask-repeat:    repeat-x | repeat-y | repeat | space | round | no-repeat;
-      /* 遮罩层的定位区域 */
-      mask-origin:    border-box | padding-box | content-box | margin-box | fill-box | stroke-box | view-box;
-      /* 遮罩层的影响范围 */
-      mask-clip:      border-box | padding-box | content-box | margin-box | fill-box | stroke-box | view-box | no-clip;
-      /* 选择遮罩层的叠加方式 */
-      mask-composite: add | subtract | intersect | exclude;
+        /* 遮罩层图像 */
+        mask-image:     none | <url>;
+        /* 遮罩层模式 */
+        mask-mode:      alpha | luminance | match-source;
+        /* 遮罩层位置 */
+        mask-position:  <position>;
+        /* 遮罩层大小 */
+        mask-size:      <length> | <percentage> | auto | cover | contain;
+        /* 遮罩层如何重复性 */
+        mask-repeat:    repeat-x | repeat-y | repeat | space | round | no-repeat;
+        /* 遮罩层的定位区域 */
+        mask-origin:    border-box | padding-box | content-box | margin-box | fill-box | stroke-box | view-box;
+        /* 遮罩层的影响范围 */
+        mask-clip:      border-box | padding-box | content-box | margin-box | fill-box | stroke-box | view-box | no-clip;
+        /* 选择遮罩层的叠加方式 */
+        mask-composite: add | subtract | intersect | exclude;
     /* <mask>标签中遮罩以亮度或是透明度呈现 */
     mask-type: luminance | alpha;
 
@@ -678,8 +675,9 @@ div {
     page-break-after:  auto | always | avoid | left | right;
     /* 设置元素容器内的分页符 */
     page-break-inside: auto | avoid;
+
     /* 页面打印时分页保留的最少行数 */
-    widows:            <integer>;
+    widows: <integer>;
 
 }
 
