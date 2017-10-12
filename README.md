@@ -269,12 +269,10 @@
 ``` css
 
 <length>:      .em | .ex | .ch | .rem | .lh | .rlh | .vh | .vw | .vi | .vb | .wmin | .vmax | .px | .mm | .cm | .in | .pt | .pc | .mozmm;
-<percentages>: .%;
 <url>:         url();
 <number>:      1 | 1.1 | -1 | +1;
 <integer>:     1 | -1 | +1;
 <color>:       <hex-color> | <named-color> | transparent | currentcolor | rgb() | hsl() | rgba() | hsla() | <deprecated-system-color>;
-<time>:        .ms | .s;
 
 
 div {
