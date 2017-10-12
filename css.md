@@ -342,8 +342,30 @@ div {
     visibility: visible | hidden | collapse;
 
     /* ---------------------------- */
-    /* ---------- 多列内容 --------- */
+    /* ---------- 盒子内容 --------- */
     /* ---------------------------- */
+
+    /* ------------------- */
+    /* ----- 溢出处理 ----- */
+    /* ------------------- */
+
+    /* 规定了内容溢出容器时的处理 */
+    [-] overflow: ...;
+        /* 水平溢出的处理 */
+        overflow-x: visible | hidden | scroll | auto;
+        /* 垂直溢出的处理 */
+        overflow-y: visible | hidden | scroll | auto;
+
+    /* ------------------- */
+    /* ----- 垂直对齐 ----- */
+    /* ------------------- */
+
+    /* 指定行内元素或表格单元格元素的垂直对齐方式 */
+    vertical-align: baseline | sub | super | text-top | text-bottom | middle | top | bottom | <percentage> | <length>;
+
+    /* ------------------- */
+    /* ----- 内容分列 ----- */
+    /* ------------------- */
 
     /* 设置列属性 */
     [-] columns: ...;
@@ -368,35 +390,13 @@ div {
     /* 指定留在容器底部元素最小行的数量 */
     orphans:     <integer>;
 
-
-    /* ---------------------------- */
-    /* ---------- 溢出处理 --------- */
-    /* ---------------------------- */
-
-    /* 规定了内容溢出容器时的处理 */
-    [-] overflow: ...;
-        /* 水平溢出的处理 */
-        overflow-x: visible | hidden | scroll | auto;
-        /* 垂直溢出的处理 */
-        overflow-y: visible | hidden | scroll | auto;
-
-    /* ---------------------------- */
-    /* ---------- 垂直对齐 --------- */
-    /* ---------------------------- */
-
-    /* 指定行内元素或表格单元格元素的垂直对齐方式 */
-    vertical-align: baseline | sub | super | text-top | text-bottom | middle | top | bottom | <percentage> | <length>;
-
-    /* ---------------------------- */
-    /* ---------- 文本渲染 --------- */
-    /* ---------------------------- */
-
-    /* 定义如何渲染字体 */
-    text-rendering: auto | optimizeSpeed | optimizeLegibility | geometricPrecision;
-
     /* ------------------- */
-    /* ----- 排版模式 ----- */
+    /* ----- 文本渲染 ----- */
     /* ------------------- */
+
+    /* ------------- */
+    /* -- 排版模式 -- */
+    /* ------------- */
 
     /* 规定文本的排版模式 */
     writing-mode:         horizontal-tb | vertical-rl | vertical-lr | sideways-rl | sideways-lr;
@@ -409,9 +409,12 @@ div {
     /* 规定文本书写方向 */
     direction:            ltr | rtl;
 
-    /* ------------------- */
-    /* ----- 文本样式 ----- */
-    /* ------------------- */
+    /* ------------- */
+    /* -- 文本样式 -- */
+    /* ------------- */
+
+    /* 定义如何渲染字体 */
+    text-rendering: auto | optimizeSpeed | optimizeLegibility | geometricPrecision;
 
     /* 设置OpenType字体样式集，https://blogs.msdn.microsoft.com/ie_cn/2012/01/17/css-4 */
     font-feature-settings:  normal | <feature-tag-value>;
@@ -435,9 +438,9 @@ div {
         /* 设置行高 */
         line-height:  normal | <number> | <length> | <percentage>;
 
-    /* ------------------- */
-    /* ----- 文本控制 ----- */
-    /* ------------------- */
+    /* ------------- */
+    /* -- 文本控制 -- */
+    /* ------------- */
 
     /* 文本溢出处理 white-space:nowrap; overflow: hidden;*/
     text-overflow: clip | ellipsis | <string>;
@@ -479,9 +482,9 @@ div {
     /* 控制文本大小写 */
     text-transform: none | capitalize | uppercase | lowercase | full-width;
 
-    /* ------------------- */
-    /* ----- 文本装饰 ----- */
-    /* ------------------- */
+    /* ------------- */
+    /* -- 文本装饰 -- */
+    /* ------------- */
 
     /* 为元素内容添加引用符号 */
     quotes: none | <string>;
