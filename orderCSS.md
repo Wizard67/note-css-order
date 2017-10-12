@@ -129,20 +129,20 @@
 ```   
 
 ###  At-rule 规则   
->需要查询完整的内容？[MDN-css At-rule](https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule)   
+>需要查询完整的内容？[MDN-CSS At-rule](https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule)   
 
 ``` css
 
     @charset ;                              /* 声明样式表的字符集 */
     @import ;                               /* 引入一个外部样式表 */
-    @namespace ;                            /* 使用XML命名空间 */
+    @namespace ;                            /* 使用 XML 命名空间 */
 
     @media () {/*...*/};                    /* 符合媒体查询后块内的样式生效 */
     @supports() {/*...*/};                  /* 检查到CSS属性可用后块内样式生效 */
     @document() {/*...*/};                  /* 符合文档条件后块内样式生效*/
     @page {/*...*/};                        /* 文档进行打印时的样式变化 */
     @font-face {/* ... */};                 /* 声明字体属性集 */
-    @keyframes {/*...*/};                   /* 描述CSS动画的变化过程 */
+    @keyframes {/*...*/};                   /* 描述 CSS 动画的变化过程 */
     @viewport {/*...*/};                    /* 控制移动设备的视窗尺寸 */
     @counter-style {/*...*/};               /* 声明计数器(counter)样式 */
     @font-feature-values {/*...*/};         /* 定义字体特定的替换和花饰 */
@@ -150,90 +150,117 @@
 ```   
 
 ### Properties 属性   
-
+>需要查询完整的内容？[MDN-CSS reference](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference) 
 #### summary list
 ``` css
+  ┌── 布局定位
+  |   ├── 元素定位
+  |   |   └── position...
+  |   └── 元素浮动
+  |       └── float...
+  |—— 盒子模型
+  |   ├── 盒子类型
+  |   |   ├── display
+  |   |   ├── 弹性盒子
+  |   |   |   └── flex...
+  |   |   ├── 网格系统
+  |   |   |   └── grid...
+  |   |   ├── 表格模型
+  |   |   |   └── table-layout...
+  |   |   ├── 列表盒子
+  |   |   |   └── list-style...
+  |   |   └── 标注模型
+  |   |       └── ruby-align...
+  |   ├── 盒子属性
+  |   |   ├── box-sizing
+  |   |   ├── 盒子尺寸
+  |   |   |   ├── width...
+  |   |   |   ├── height...
+  |   |   |   ├── padding...
+  |   |   |   ├── border...
+  |   |   |   ├── outline...
+  |   |   |   └── margin...
+  |   |   └── 盒子样式
+  |   |       ├── color
+  |   |       ├── background...
+  |   |       ├── background-blend-mode...
+  |   |       ├── clip-path
+  |   |       ├── mask...
+  |   |       ├── filter
+  |   |       ├── box-shadow
+  |   |       ├── opacity
+  |   |       └── visibility
+  |   └── 盒子内容
+  |       ├── 溢出处理
+  |       |   └── overflow...
+  |       ├── 垂直对齐
+  |       |   └── vertical-align
+  |       ├── 内容分列
+  |       |   └── columns...
+  |       ├── 文本渲染
+  |       |   ├── 排版模式
+  |       |   |   └── writing-mode...
+  |       |   ├── 文本样式
+  |       |   |   ├── text-rendering
+  |       |   |   ├── font-feature-settings...
+  |       |   |   └── font...
+  |       |   ├── 文本控制
+  |       |   |   ├── text-overflow
+  |       |   |   ├── white-space
+  |       |   |   ├── overflow-wrap...
+  |       |   |   ├── word-break...
+  |       |   |   ├── text-align...
+  |       |   |   ├── font-synthesis
+  |       |   |   ├── font-size-adjust
+  |       |   |   ├── letter-spacing...
+  |       |   |   └── text-transform...
+  |       |   └── 文本装饰
+  |       |       ├── quotes
+  |       |       ├── tab-size
+  |       |       ├── text-indent
+  |       |       ├── text-emphasis...
+  |       |       ├── text-decoration...
+  |       |       └── text-shadow
+  |       └── 图片元素
+  |           ├── image-rendering...
+  |           └── shape-image-threshold...
+  |—— 盒子变形
+  |   ├── transform-style...
+  |   ├── perspective...
+  |   └── backface-visibility
+  |—— 动态效果
+  |   ├── 过渡动画
+  |   |   ├── transition...
+  |   |   └── animation...
+  |   └── 滚动效果
+  |       └── scroll-behavior...
+  └── 其他属性
+      ├── 用户行为
+      |   ├── resize
+      |   ├── cursorresize...
+      |   ├── touch-action
+      |   ├── caret-color
+      |   └── ime-mode
+      ├── 元素属性
+      |   └── object-fit
+      |   ├── object-position
+      |   ├── content
+      |   ├── counter-reset...
+      |   ├── will-change
+      |   ├── pointer-events
+      |   ├── z-index
+      |   └── all
+      ├── 定义变量
+      |   └── --*
+      └── 页面打印
+          ├── page-break-before...
+          └── widows
 
-/* 布局定位 */  
-    position      /* 定位方式 */
-    float         /* 元素浮动 */
+```  
+#### detail list  
 
-/* 盒子模型 */
-    /* 模型类型 */
-    display        /* 定义类型 */
-    flex           /* 弹性盒子 */
-    table [+]      /* table盒子 */
-    list-style     /* list盒子 */
+``` css
 
-    /* 模型属性 */
-    box-sizing        /* 盒子属性 */
-    width [+]         /* 内容宽度 */
-    height [+]        /* 内容高度 */
-    padding           /* 内边距 */
-    border [+]        /* 边界 */
-    outline [+]       /* 轮廓 */
-    margin [+]        /* 外边距 */
-
-    color             /* 前景色 */
-    background [+]    /* 背景属性 */
-    box-shadow        /* 阴影 */
-    opacity           /* 透明度 */
-    filter            /* 滤镜 */
-
-    /* 内容属性 */
-    colums [+]       /* 行列划分 */
-    overflow         /* 溢出处理 */
-    verical-align    /* 特定元素垂直对齐 */
-
-    text-rendering      /* 字体渲染 */
-    writing-mode [+]    /* 排版模式 */
-    font [+]            /* 字体属性 */
-
-　　font-feature-setting  /*字体样式集 */
-        /*文本控制  */
-　　　　white-space  /*空白符处理   */
-　　　　text-overflow  /*文本溢出处理 */
-　　　　letter-spacing  /*字间距       */
-           /* 西文处理 */ 
-　　　　　　 [+]  
-　　　　text-align [+]  /*文本对齐     */
-        /* 文本装饰  */
-　　　　qutoes  /*引用符号   */
-　　　　tab-size  /*制表符宽度 */
-　　　　text-indent  /*首行缩进   */
-　　　　text-emphasis [+]  /*重点标记   */
-　　　　text-decoration [+]  /*横线装饰   */
-　　　　text-shadow  /*文本阴影   */
-
-    image-rendering  /*缩放算法 */
-    image-orentation  /*预设方向 */
-
-    /* 其他属性 */
-    object-fit [+]  /*元素替换 */
-    z-index  /*重叠权重 */
-    zoom  /*元素缩放 */
-    clip  /*裁剪     */
-    resize  /*尺寸调整 */
-    cursor  /*鼠标手势 */
-    visibility  /*可见性   */
-    counter-reset [+]  /*计数器   */
-    counter  /*文本容器 */
-    will  /*优化准备 */
-    pointer-events    /*事件穿透 */
-    appearance  /*渲染样式 */
-    all  /*属性重置 */
-
-/* 模型变形 */
-　　transform-style    /* 空间状态 */
-　　transform [+]      /* 模型变形 */
-　　perspective [+]    /* 空间透视 */
-
-/* 动态效果 */
-    transition [+]    /* 过渡效果 */
-    animation [+]     /* 动画属性 */
-
-/* 其他属性 */
-    
 
 
 ```
